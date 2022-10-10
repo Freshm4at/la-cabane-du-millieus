@@ -57,6 +57,10 @@
     z-index: 5;
 }
 
+.app__navbar-smallscreen-links{
+    list-style: none;
+}
+
 .app__navbar-smallscreen_overlay li {
     margin: 0 1rem;
     cursor: pointer;
