@@ -1,0 +1,53 @@
+.app__aboutus{
+    position: relative;
+}
+.app__aboutus-overlay{
+    position: absolute;
+    inset: 0;
+}
+
+.app__aboutus-content {
+    width: 100%;
+}
+
+.app__aboutus-content_about{
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    flex-direction: column;
+    text-align: right;
+}
+
+.custom__button{
+    margin: 1rem;
+}
+
+.app__aboutus-content_history{
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    text-align: left;
+}
+
+.app__aboutus-content_img img{
+    height: 500px;
+    margin: 2rem;
+    
+}
+
+@media screen and (max-width: 2000px){
+    .app__aboutus-content_img{
+        margin: 4rem 0;
+    }
+}
+@media screen and (max-width: 450px){
+    .app__aboutus-content_img{
+        margin: 4rem 0;
+    }
+    .app__aboutus-content{
+        flex-direction: column;
+    }
+}
