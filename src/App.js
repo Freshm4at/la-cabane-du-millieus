@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { AboutUs, Chef, FindUs, Footer, Gallery, Header, Intro, Laurels, SpecialMenu } from './container';
+import { AboutUs, FindUs, Footer, Gallery, Header, Intro } from './container';
 import { Navbar } from './components';
 import './App.css';
 
