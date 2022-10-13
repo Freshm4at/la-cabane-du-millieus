@@ -1,5 +1,6 @@
 .app__header{
     background-color: var(--color-night-blue);
+    width: 100%;
 }
 
 .app__header-h1{
