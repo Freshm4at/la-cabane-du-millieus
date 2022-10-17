@@ -1,3 +1,7 @@
+/* ######### CSS for navigation bar ######### */
+
+
+/* General setting for navbar */
 .app__navbar{
     width: 100%;
     height: 150px;
@@ -5,10 +9,10 @@
     justify-content: space-between;
     align-items: center;
     background: var(--color-night-blue);
-
     padding: 1rem 2rem;
 }
 
+/* CSS for the logo with a cercle in backgroud */
 .app__navbar-logo p {
     width: 400px;
     height: 250px;
@@ -21,30 +25,34 @@
     font-family: var(--font-bold);
 }
 
+/* CSS for ul, the link's list for navigation */
 .app__navbar-links {
     flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
-
+    z-index: 1;
     list-style: none;
 }
 
+/* CSS for each elem in the list */
 .app__navbar-links li {
+    position: relative;
     margin: 0 3rem;
     cursor: pointer;
+    font-size: 20px;
     color: var(--color-white);
 }
 
-.app__navbar-links li:hover {
-    color: var(--color-golden);
-    border-bottom: 1px solid var(--color-golden);
-}
+/* ### SECTION FOR SMALLSCREEN ### */
 
+/* Hind the screen */
 .app__navbar-smallscreen {
     display: none;
 }
 
+/* CSS for the creation of the smallscreen overlay
+Add animation to smooth transition */
 .app__navbar-smallscreen_overlay {
     position: fixed;
     top: 0;
@@ -54,25 +62,25 @@
     background: var(--color-night-blue);
     transition: 0.5s ease;
     flex-direction: column;
-    z-index: 5;
+    z-index: 1;
 }
 
+/* remove point list */
 .app__navbar-smallscreen-links{
     list-style: none;
 }
 
+/* CSS for each elem in list for smallscreen */
 .app__navbar-smallscreen-links li {
     margin: 3rem 0;
     cursor: pointer;
+    position: relative;
     color: var(--color-white);
     font-size:  2rem;
     text-align: center;
 }
 
-.app__navbar-smallscreen_overlay li:hover{
-    color: var(--color-golden);
-}
-
+/* CSS for close button smallscreen navpage  */
 .app__navbar-smallscreen_overlay .overlay__close{
     font-size: 27px;
     color: var(--color-golden);
@@ -83,6 +91,7 @@
     right: 20px;
 }
 
+/* ### SMALLSCREEN ADJUSTEMENT FOR SCREEN WIDTH */
 @media screen and (max-width: 1150px){
     .app__navbar-links li{
         display: none;
@@ -102,4 +111,40 @@
     .app__navbar-logo p{
         width: 250px;
     }
+}
+  
+.app__navbar-links li:hover::before{
+transform: scaleX(1);
+transform-origin: bottom left;
+}
+
+.app__navbar-smallscreen-links li:hover::before{
+    transform: scaleX(1);
+    transform-origin: bottom left;
+    }
+  
+.app__navbar-links li::before {
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+    inset: 0 0 0 0;
+    background: var(--color-golden);
+    z-index: -1;
+    transition: transform .3s ease;
+}
+
+.app__navbar-smallscreen-links li::before {
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+    inset: 0 0 0 0;
+    background: var(--color-golden);
+    z-index: -1;
+    transition: transform .3s ease;
 }
