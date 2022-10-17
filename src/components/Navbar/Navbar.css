@@ -31,7 +31,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 1;
+    z-index: 0;
     list-style: none;
 }
 
@@ -112,18 +112,15 @@ Add animation to smooth transition */
         width: 250px;
     }
 }
-  
-.app__navbar-links li:hover::before{
+ 
+/* ### ANIMATION SECTION ### */
+/* navbar links animation, color box when mouse pass over */
+.app__navbar-links li:hover::before, .app__navbar-smallscreen-links li:hover::before{
 transform: scaleX(1);
 transform-origin: bottom left;
 }
-
-.app__navbar-smallscreen-links li:hover::before{
-    transform: scaleX(1);
-    transform-origin: bottom left;
-    }
   
-.app__navbar-links li::before {
+.app__navbar-links li::before, .app__navbar-smallscreen-links li::before {
     transform: scaleX(0);
     transform-origin: bottom right;
     content: " ";
@@ -133,18 +130,5 @@ transform-origin: bottom left;
     inset: 0 0 0 0;
     background: var(--color-golden);
     z-index: -1;
-    transition: transform .3s ease;
-}
-
-.app__navbar-smallscreen-links li::before {
-    transform: scaleX(0);
-    transform-origin: bottom right;
-    content: " ";
-    display: block;
-    position: absolute;
-    top: 0; right: 0; bottom: 0; left: 0;
-    inset: 0 0 0 0;
-    background: var(--color-golden);
-    z-index: -1;
-    transition: transform .3s ease;
+    transition: transform .5s ease;
 }
