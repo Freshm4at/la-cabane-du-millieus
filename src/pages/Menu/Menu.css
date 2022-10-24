@@ -1,0 +1,12 @@
+.app__menu{
+    background: var(--color-night-blue);
+}
+
+.app__menu-header_img{
+    width: 100%;
+    height: 100%;
+}
+.app__menu-header_img img {
+    width: 100%;
+    height: 450px;
+}

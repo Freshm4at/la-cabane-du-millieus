@@ -1,5 +1,5 @@
 import React from 'react';
-import { AboutUs, FindUs, Footer, Gallery, Header, Intro } from '.';
+import { AboutUs, FindUs, Gallery, Header, Intro } from '.';
 
 const Home = () => (
     <div className='app__main'>
@@ -8,7 +8,6 @@ const Home = () => (
       <AboutUs />
       <Gallery />
       <FindUs />
-      <Footer />
     </div>
   );
   
