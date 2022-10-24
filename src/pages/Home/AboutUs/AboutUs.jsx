@@ -1,7 +1,7 @@
 import React from 'react';
 
 import './AboutUs.css';
-import { images } from '../../constants';
+import { images } from '../../../constants';
 
 const AboutUs = () => (
   <div className='app__aboutus app__bg flex__center section__padding' id='about'>

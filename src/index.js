@@ -1,9 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { BrowserRouter } from 'react-router-dom';
 
 import './index.css';
 import App from './App';
-import './fonts/Oswald/fonts/Oswald-Medium.ttf'
-
-ReactDOM.render(<App />, document.getElementById('root'));
-
+ReactDOM.render(
+    <React.StrictMode>
+        <App />
+    </React.StrictMode>,
+    document.getElementById('root')
+    );

@@ -2,7 +2,7 @@ import React from 'react'
 import { GiHamburgerMenu } from 'react-icons/gi'
 import { MdOutlineRestaurantMenu}  from 'react-icons/md'
 
-import images from '../../constants/images'
+import { NavLink as Link } from "react-router-dom";
 import './Navbar.css';
 
 const Navbar = () => {
@@ -10,15 +10,15 @@ const Navbar = () => {
   return(
     <nav className='app__navbar'>
       <ul className='app__navbar-links'>
-        <li className='p__opensans'><a href='#home'>Acceuil</a></li>
-        <li className='p__opensans'><a href='#menu'>Menu</a></li>
+        <li className='p__opensans'><Link to='/'>Acceuil</Link></li>
+        <li className='p__opensans'><Link to='/menu'>Menu</Link></li>
         <div className='app__navbar-logo'>
-        <a href='#home'>
+        <Link to='/'>
           <p className='p__opensans'>La cabane du Mil'lieu</p>
-        </a>
+        </Link>
         </div>
-        <li className='p__opensans'><a href='#photo'>Photos</a></li>
-        <li className='p__opensans'><a href='#contact'>Contact</a></li>
+        <li className='p__opensans'><Link to='/photo'>Photos</Link></li>
+        <li className='p__opensans'><Link to='/contact'>Contact</Link></li>
       </ul>
       <div className='app__navbar-smallscreen'>
         <GiHamburgerMenu color='#fff' fontsize={27} onClick={()=> {setToggleMenu(true)}}/>
@@ -26,10 +26,10 @@ const Navbar = () => {
           <div className='app__navbar-smallscreen_overlay flex__center slide-bottom'>
             <MdOutlineRestaurantMenu fontsize={27} className='overlay__close' onClick={()=>{setToggleMenu(false)}}/>
         <ul className='app__navbar-smallscreen-links'>
-          <li className='p__opensans'><a href='#home'>Acceuil</a></li>
-          <li className='p__opensans'><a href='#menu'>Menu</a></li>
-          <li className='p__opensans'><a href='#photo'>Photos</a></li>
-          <li className='p__opensans'><a href='#contact'>Contact</a></li>
+          <li className='p__opensans'><Link to='/'>Acceuil</Link></li>
+          <li className='p__opensans'><Link to='/menu'>Menu</Link></li>
+          <li className='p__opensans'><Link to='/photo'>Photos</Link></li>
+          <li className='p__opensans'><Link to='/contact'>Contact</Link></li>
         </ul>
         </div>
         )}

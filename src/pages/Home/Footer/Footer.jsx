@@ -1,8 +1,6 @@
 import React from 'react';
 
 import './Footer.css';
-import { FooterOverlay } from '../../components';
-
 const Footer = () => (
   <div className='app__footer section__padding'>
     <div className='app__footer-links'>

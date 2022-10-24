@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import {meal} from '../../constants'
+import {meal} from '../../../constants'
 import './Intro.css';
 
 const Intro = () => {
