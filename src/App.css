@@ -67,6 +67,22 @@
     cursor: pointer;
 }
 
+.custom__button-text{
+  transition: color 1s;
+    overflow: hidden;
+    background: linear-gradient(to right, var(--color-golden), var(--color-golden) 50%, var(--color-white) 50%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 200% 100%;
+    background-position: 100%;
+    transition: background-position 275ms ease;
+}
+.custom__button-text:hover{
+  background-position: 0 100%;
+  color: var(--color-gold);
+}
+
 .p__cormorant {
   font-family: var(--font-base);
   color: var(--color-black);

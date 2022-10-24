@@ -12,6 +12,7 @@ import gallery04 from '../assets/gallery04.png';
 import menuHeader from '../assets/menuHeader.jpg';
 import menuMap from '../assets/menu_paper.jpg'
 import sea from '../assets/sea.png'
+import fish from '../assets/fish-drawing.png'
 
 export default {
   bg,
@@ -28,4 +29,5 @@ export default {
   menuHeader,
   menuMap,
   sea,
+  fish,
 };
