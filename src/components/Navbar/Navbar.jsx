@@ -14,7 +14,7 @@ const Navbar = () => {
         <li className='p__opensans'><Link to='/menu'>Menu</Link></li>
         <div className='app__navbar-logo'>
         <Link to='/'>
-          <p className='p__opensans'>La cabane du Mil'lieu</p>
+          <p className='p__opensans'>La cabane du Mil'lieus</p>
         </Link>
         </div>
         <li className='p__opensans'><Link to='/photo'>Photos</Link></li>

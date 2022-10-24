@@ -10,6 +10,7 @@ import gallery02 from '../assets/gallery02.png';
 import gallery03 from '../assets/gallery03.png';
 import gallery04 from '../assets/gallery04.png';
 import menuHeader from '../assets/menuHeader.jpg';
+import menuMap from '../assets/menu_paper.jpg'
 
 export default {
   bg,
@@ -24,4 +25,5 @@ export default {
   welcome,
   findus,
   menuHeader,
+  menuMap,
 };

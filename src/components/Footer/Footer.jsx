@@ -11,7 +11,7 @@ const Footer = () => (
       </div>
       <div className='app__footer-links_logo'>
       <a href='#home'>
-          <p className='p__opensans'>La cabane du Mil'lieu</p>
+          <p className='p__opensans'>La cabane du Mil'lieus</p>
       </a>
       </div>
       <div className='app__footer-links_works'>

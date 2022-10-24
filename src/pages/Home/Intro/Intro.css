@@ -1,7 +1,7 @@
 .app__video{
     height: 100%;
     position: relative;
-    background-color: var(--color-night-blue);
+    background-color: var(--color-crimson);
 }
 
 .app__video video{
