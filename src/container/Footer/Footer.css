@@ -44,9 +44,6 @@
 }
 .app__footer-links_logo p:hover{
     background-position: 0 100%;
-}
-
-.app__footer-links_logo p:hover{
     color: var(--color-gold);
 }
 
