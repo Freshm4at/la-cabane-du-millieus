@@ -92,7 +92,7 @@ Add animation to smooth transition */
 /* CSS for close button smallscreen navpage  */
 .app__navbar-smallscreen_overlay .overlay__close{
     font-size: 27px;
-    color: var(--color-golden);
+    color: var(--color-black);
     cursor: pointer;
 
     position: absolute;
@@ -119,6 +119,7 @@ Add animation to smooth transition */
     }
     .app__navbar-logo p{
         width: 250px;
+        font-size: 20px;
     }
 }
  
