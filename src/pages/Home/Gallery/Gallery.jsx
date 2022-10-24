@@ -21,9 +21,9 @@ const Gallery = () => {
   return(
   <div className='app__gallery flex__center'>
     <div className='app__gallery-content'>
-      <SubHeading title="Instagram"/>
-      <h1 className='headtext_oswald'>Photos</h1>
-      <p className='p__opensan' style={{color: "#AAA", marginTop: "2rem"}}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      <SubHeading title="Des plats maisons"/>
+      <h1 className='headtext__cormorant'>Photos</h1>
+      <p className='p__opensans' style={{marginTop: "2rem"}}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
       <button type='button' className='custom__button'>En savoir plus</button>
     </div>
     <div className='app__gallery-images'>

@@ -7,7 +7,7 @@
     align-items: center;
     flex-direction: column;
 
-    background: var(--color-black);
+    background: var(--color-crimson);
     padding-top: 0;
 }
 
@@ -34,7 +34,7 @@
     font-family: var(--font-bold);
     transition: color 1s;
     overflow: hidden;
-    background: linear-gradient(to right, var(--color-golden), var(--color-golden) 50%, white 50%);
+    background: linear-gradient(to right, var(--color-prussian-blue), var(--color-golden) 50%, var(--color-black) 50%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;

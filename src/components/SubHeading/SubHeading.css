@@ -1,0 +1,8 @@
+.app__subheading{
+    margin: 1rem;
+    width:200px;
+}
+.app__subheading img{
+    max-width: 100%;
+    max-height: 50px;
+}
