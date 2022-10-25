@@ -11,7 +11,7 @@ const photos = () =>(
             <img src={images.seatPhoto} alt='sea photo'></img>
             <h1 className='headtext__cormorant' style={{color:'black'}}> Gallerie photos</h1>
         </div>
-        <GalleryComponent></GalleryComponent>
+        <GalleryComponent galleyImages={galleryImages}></GalleryComponent>
     </div>
 )
 export default photos
