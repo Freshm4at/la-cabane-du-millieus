@@ -9,7 +9,7 @@ const photos = () =>(
     <div className='app__photos'>
         <div className='app__photos-header'>
             <img src={images.seatPhoto} alt='sea photo'></img>
-            <h1 className='headtext__cormorant' style={{color:'black'}}> Gallerie photos</h1>
+            <h1 className='headtext__cormorant'> Gallerie photos</h1>
         </div>
         <GalleryComponent galleyImages={galleryImages}></GalleryComponent>
     </div>

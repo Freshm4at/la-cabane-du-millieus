@@ -4,7 +4,15 @@
     background-color: var(--color-crimson);
 }
 .app__photos-header{
+    width: 100%;
     text-align: center;
+}
+.app__photos h1{
+    position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-shadow: 1px 1px 2px var(--color-prussian-blue);
 }
 .app__photos-header img{
     height: 600px;
