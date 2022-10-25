@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { images } from '../../constants';
 
 import './Footer.css';
 const Footer = () => (
@@ -14,6 +15,7 @@ const Footer = () => (
       <Link to='/'>
           <p className='p__opensans'>La cabane du Mil'lieus</p>
       </Link>
+        <img src={images.boat} alt='header img'/>
       </div>
       <div className='app__footer-links_works'>
         <h1 className='app__footer-headtext'>Horairre d'ouverture</h1>

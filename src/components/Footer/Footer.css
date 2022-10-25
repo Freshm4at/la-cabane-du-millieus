@@ -61,6 +61,11 @@
     text-align: center;
     color: var(--color-golden);
 }
+.app__footer-links_logo img{
+    width: 70px;
+    height: 70px;
+    margin-top: 2rem;
+}
 
 @media screen and (max-width: 1150px){
     .app__footer-headtext{
