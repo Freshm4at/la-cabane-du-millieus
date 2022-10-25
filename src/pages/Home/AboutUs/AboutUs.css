@@ -17,6 +17,7 @@
     align-items: flex-end;
     flex-direction: column;
     text-align: right;
+    margin: 1rem;
 }
 
 .custom__button{
@@ -30,24 +31,41 @@
     align-items: flex-start;
     flex-direction: column;
     text-align: left;
+    margin: 1rem;
 }
 
 .app__aboutus-content_img img{
     height: 500px;
     margin: 2rem;
-    
 }
 
-@media screen and (max-width: 2000px){
-    .app__aboutus-content_img{
+@media screen and (min-width: 2000px) {
+
+    .app__aboutus-content_about p,
+    .app__aboutus-content_history p {
         margin: 4rem 0;
     }
 }
-@media screen and (max-width: 450px){
-    .app__aboutus-content_img{
-        margin: 4rem 0;
-    }
-    .app__aboutus-content{
+
+@media screen and (max-width: 1000px) {
+    .app__aboutus-content {
         flex-direction: column;
+    }
+
+    .app__aboutus-content_img {
+        -webkit-transform:rotate(90deg);
+        -moz-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+        -o-transform: rotate(90deg);
+        transform: rotate(90deg);
+        height: 300px;
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+    .app__aboutus-content_img img{
+        height: 80%;
+        width: 90%;
     }
 }

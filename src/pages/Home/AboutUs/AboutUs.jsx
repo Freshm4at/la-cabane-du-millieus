@@ -15,7 +15,7 @@ const AboutUs = () => (
         </button>
       </div>
 
-      <div className='app__aboutus-content_img'>
+      <div className='app__aboutus-content_img flex__center'>
         <img src={images.fish}/>
       </div>
 
