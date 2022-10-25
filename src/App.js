@@ -1,8 +1,7 @@
 import React from 'react';
 import './App.css';
 import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
-import { Navbar } from './components';
-import { Footer } from './components';
+import { Navbar, Footer,ScrollToTop} from './components';
 
 import Home from './pages/Home/Home';
 import Menu from './pages/Menu/Menu';
@@ -11,6 +10,7 @@ import Photos from './pages/Photos/photos'
 const App = () => (
   <div className='app__main'>
     <Router>
+    <ScrollToTop />
     <Navbar></Navbar>
     <Routes>
         <Route exact path='/' element={<Home />} />
