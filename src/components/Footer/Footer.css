@@ -12,17 +12,17 @@
 }
 
 .app__footer-links {
-    width: 100%;
+    flex: 1;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: flex-start;
     margin-top: 5rem;
-    padding: 0 0em;
 }
 
 .app__footer-links_contact,
 .app__footer-links_logo,
 .app__footer-links_work{
+    position: relative;
     flex:1;
     text-align: center;
     margin: 1rem;
@@ -39,6 +39,7 @@
     background-size: 200% 100%;
     background-position: 100%;
     transition: background-position 275ms ease;
+    text-align: center;
 }
 .app__footer-links_logo p:hover{
     background-position: 0 100%;

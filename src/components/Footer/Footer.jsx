@@ -3,8 +3,8 @@ import React from 'react';
 import './Footer.css';
 const Footer = () => (
   <div className='app__footer section__padding'>
-    <div className='app__footer-links'>
-      <div className='app__footer-links_contact'>
+    <div className='app__footer-links flex__center'>
+      <div className='app__footer-links_contact' >
         <h1 className='app__footer-headtext'>Contact</h1>
         <p className='p__opensans'>hello</p>
         <p className='p__opensans'>hello</p>
