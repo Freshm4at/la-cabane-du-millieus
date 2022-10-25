@@ -8,7 +8,7 @@ const galleryImages = [images.gallery01,images.gallery02,images.gallery03,images
 const photos = () =>(
     <div className='app__photos'>
         <div className='app__photos-header'>
-            <img src={images.seatPhoto} alt='sea photo'></img>
+            <img src={images.seatPhoto} alt='sea_photo'></img>
             <h1 className='headtext__cormorant'> Gallerie photos</h1>
         </div>
         <GalleryComponent galleyImages={galleryImages}></GalleryComponent>

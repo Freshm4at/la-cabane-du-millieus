@@ -1,5 +1,4 @@
 import React from 'react'
-import { GiHamburgerMenu } from 'react-icons/gi'
 import { MdOutlineRestaurantMenu}  from 'react-icons/md'
 import { NavLink as Link } from "react-router-dom";
 import images from '../../constants/images'
@@ -21,7 +20,7 @@ const Navbar = () => {
         <li className='p__opensans'><Link to='/contact'>Contact</Link></li>
       </ul>
       <div className='app__navbar-smallscreen'>
-        <img src={images.menuButton} onClick={()=> {setToggleMenu(true)}}/>
+        <img src={images.menuButton} onClick={()=> {setToggleMenu(true)}} alt='menu_button'/>
         {toggleMenu && (
           <div className='app__navbar-smallscreen_overlay flex__center slide-bottom'>
             <MdOutlineRestaurantMenu fontsize={27} className='overlay__close' onClick={()=>{setToggleMenu(false)}}/>

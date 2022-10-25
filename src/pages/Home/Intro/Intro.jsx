@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import {meal} from '../../../constants'
 import './Intro.css';
 

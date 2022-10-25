@@ -13,7 +13,7 @@ const AboutUs = () => (
       </div>
 
       <div className='app__aboutus-content_img flex__center'>
-        <img src={images.fish}/>
+        <img src={images.fish} alt='fish_photo'/>
       </div>
 
       <div className='app__aboutus-content_history'>
