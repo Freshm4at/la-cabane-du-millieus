@@ -1,8 +1,6 @@
 import bg from '../assets/bg.png';
-import knife from '../assets/knife.png';
 import menu from '../assets/menu.png';
 import overlaybg from '../assets/overlaybg.png';
-import spoon from '../assets/spoon.svg';
 import welcome from '../assets/welcome.png';
 import findus from '../assets/findus.png';
 import gallery01 from '../assets/gallery01.png'
@@ -16,6 +14,7 @@ import fish from '../assets/fish-drawing.png'
 import menuButton from '../assets/buttonMenu.png'
 import boat from '../assets/boat.png'
 import seatPhoto from '../assets/seaPhoto.jpg'
+import fishPhoto from '../assets/fish_photo.jpg'
 
 export default {
   bg,
@@ -23,10 +22,8 @@ export default {
   gallery02,
   gallery03,
   gallery04,
-  knife,
   menu,
   overlaybg,
-  spoon,
   welcome,
   findus,
   menuHeader,
@@ -36,4 +33,5 @@ export default {
   menuButton,
   boat,
   seatPhoto,
+  fishPhoto,
 };

@@ -1,0 +1,40 @@
+.app__contact{
+    background-color: var(--color-prussian-blue);
+    width: 100%;
+}
+.app__contact-content_information{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.app__contact-content_information div{
+    margin-top: 2rem;
+}
+
+.app__contact img{
+    height: 100%;
+    width: 100%;
+}
+
+.app__contact-h1{
+    font-family: var(--font-base);
+    color: var(--color-golden);
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    line-height: 117px;
+    font-size: 90px;
+}
+
+.app__contact-content img{
+    width: 80%;
+}
+
+@media screen and (max-width: 900px){
+    .app__contact img{
+        height: 300px;
+        width: 100%;
+    }
+    .app__contact-h1{
+        font-size: 70px;
+    }
+}
