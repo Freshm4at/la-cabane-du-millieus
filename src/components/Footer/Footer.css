@@ -46,6 +46,10 @@
     color: var(--color-gold);
 }
 
+.app__footer-links_works{
+    margin-left: 2rem;
+}
+
 .app__footer-links_works p{
     text-align: center;
 }

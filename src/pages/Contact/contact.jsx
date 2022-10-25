@@ -29,7 +29,7 @@ const Contact = () => (
             <img src={images.welcome} alt='header img'/>
         </div>
     </div>
-    <p className='p__cormorant' style={{"text-align":'center',color:'#FBF5F3',padding:'2rem','font-size':'14px'}}>Ouvert du mardi au jeudi de 9h à 20h et du vendredi au samedi de 9h à 20h30 et le dimanche de 9h à 13h30.</p>
+    <p className='p__cormorant' style={{"text-align":'center',color:'#FBF5F3',padding:'2rem','font-size':'16px'}}>Ouvert du mardi au jeudi de 9h à 20h et du vendredi au samedi de 9h à 20h30 et le dimanche de 9h à 13h30.</p>
   </div>
 );
 export default Contact;
