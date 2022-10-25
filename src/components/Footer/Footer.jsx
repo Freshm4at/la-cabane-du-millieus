@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import './Footer.css';
 const Footer = () => (
@@ -10,9 +11,9 @@ const Footer = () => (
         <p className='p__opensans'>hello</p>
       </div>
       <div className='app__footer-links_logo'>
-        <a href='#home'>
+      <Link to='/'>
           <p className='p__opensans'>La cabane du Mil'lieus</p>
-        </a>
+      </Link>
       </div>
       <div className='app__footer-links_works'>
         <h1 className='app__footer-headtext'>Horairre d'ouverture</h1>
