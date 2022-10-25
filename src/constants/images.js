@@ -16,7 +16,9 @@ import boat from '../assets/boat.png'
 import seatPhoto from '../assets/seaPhoto.jpg'
 import fishPhoto from '../assets/fish_photo.jpg'
 
-const images ={  bg,
+
+export default {
+  bg,
   gallery01,
   gallery02,
   gallery03,
@@ -32,8 +34,5 @@ const images ={  bg,
   menuButton,
   boat,
   seatPhoto,
-  fishPhoto,}
-
-export default {
-  images
+  fishPhoto,
 };
