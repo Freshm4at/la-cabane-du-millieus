@@ -24,7 +24,7 @@ const Gallery = () => {
       <SubHeading title="Des plats maisons"/>
       <h1 className='headtext__cormorant'>Photos</h1>
       <p className='p__opensans' style={{marginTop: "2rem"}}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-      <button type='button' className='custom__button'><p className='custom__button-text'>En savoir plus</p></button>
+      <button type='button' className='custom__button' onClick={event =>  window.location.href='/photos'}><p className='custom__button-text'>Decouvrir nos plats</p></button>
     </div>
     <div className='app__gallery-images'>
       <div className='app__gallery-images_container'>

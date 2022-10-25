@@ -14,7 +14,7 @@ const FindUs = () => (
         <p className='p__opensans' style={{color:"#FFFFFF"}}> Royan ZOOOOOOOO</p>
         <p className='p__opensans' style={{color:"#FFFFFF"}}> Royan ZOOOOOOOO</p>
       </div>
-      <button type='button' className='custom__button'><p className='custom__button-text'>En savoir plus</p></button>
+      <button type='button' className='custom__button' onClick={event =>  window.location.href='/contact'} ><p className='custom__button-text'>Voir sur la carte</p></button>
     </div>
     <div className='app__wrapper_img'>
       <img src={images.findus} alt="findus"/>
