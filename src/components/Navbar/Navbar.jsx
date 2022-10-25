@@ -17,7 +17,7 @@ const Navbar = () => {
           <p className='p__opensans'>La cabane du Mil'lieus</p>
         </Link>
         </div>
-        <li className='p__opensans'><Link to='/photo'>Photos</Link></li>
+        <li className='p__opensans'><Link to='/photos'>Photos</Link></li>
         <li className='p__opensans'><Link to='/contact'>Contact</Link></li>
       </ul>
       <div className='app__navbar-smallscreen'>
@@ -28,7 +28,7 @@ const Navbar = () => {
         <ul className='app__navbar-smallscreen-links'>
           <li className='p__opensans'><Link to='/'>Acceuil</Link></li>
           <li className='p__opensans'><Link to='/menu'>Menu</Link></li>
-          <li className='p__opensans'><Link to='/photo'>Photos</Link></li>
+          <li className='p__opensans'><Link to='/photos'>Photos</Link></li>
           <li className='p__opensans'><Link to='/contact'>Contact</Link></li>
         </ul>
         </div>

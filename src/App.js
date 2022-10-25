@@ -2,10 +2,11 @@ import React from 'react';
 import './App.css';
 import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import { Navbar } from './components';
-import Footer from './components/Footer/Footer';
+import { Footer } from './components';
 
 import Home from './pages/Home/Home';
 import Menu from './pages/Menu/Menu';
+import Photos from './pages/Photos/photos'
 
 const App = () => (
   <div className='app__main'>
@@ -14,6 +15,7 @@ const App = () => (
     <Routes>
         <Route exact path='/' element={<Home />} />
         <Route exact path='/menu' element={<Menu />}></Route>
+        <Route exact path='/photos' element={<Photos />}></Route>
     </Routes>
     <Footer></Footer>
     </Router>
