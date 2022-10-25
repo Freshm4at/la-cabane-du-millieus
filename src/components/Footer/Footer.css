@@ -87,6 +87,17 @@
 
 @media screen and (max-width: 650px) {
     .app__footer {
-        padding: 0 0 2rem 0;
+        padding: 0 0 0rem 0;
+    }
+    .app__footer-links{
+        margin-top: 1rem; 
+    }
+    .app__footer-links_contact,
+    .app__footer-links_logo,
+    .app__footer-links_work{
+        margin: 10px;
+    }
+    .app__footer-links_logo{
+        margin-bottom: 20px;
     }
 }
