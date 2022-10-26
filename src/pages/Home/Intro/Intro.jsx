@@ -5,7 +5,7 @@ import './Intro.css';
 const Intro = () => {
   const vidRef = React.useRef();
   return(
-  <div className='app__video'>
+  <div className='app__video' id='home'>
     <video src={meal}
     ref={vidRef}
     type='video/mp4'
