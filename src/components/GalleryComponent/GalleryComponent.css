@@ -18,7 +18,7 @@
 }
 
 .app__galleryWrap .single img:hover{
-    transform: scale(1.05);
+    transform: scale(1.12);
 }
 .sliderWrap{
     position: fixed;
