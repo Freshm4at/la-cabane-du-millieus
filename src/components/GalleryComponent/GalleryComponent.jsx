@@ -51,7 +51,11 @@ const GalleryComponent = ({galleyImages}) => {
                 return(
                     <div className='single' key={`gallery_slide-${index+1}`}
                     onClick={ ()=> handleOpenModal(index)}>
-                        <img src={slide} alt='slides'></img>
+                        <div className="app__img-render" style={{height:'200px',width:'200px'}}>
+                            <div className="app__square-up"></div>
+                                <img src={slide} alt='slides'></img>
+                            <div className="app__square-down"></div>
+                        </div>
                     </div>
                 )
             })
