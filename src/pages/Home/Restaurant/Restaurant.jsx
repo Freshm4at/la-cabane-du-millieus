@@ -2,12 +2,13 @@ import React from 'react';
 
 import { SubHeading } from '../../../components';
 import { images } from '../../../constants';
+import './Restaurant.css'
 
-const FindUs = () => (
-  <div className='app__bg app__wrapper section__padding' id='contact'>
+const Restaurant = () => (
+  <div className='app__bg app__wrapper section__padding' id='restaurant'>
     <div className='app__wrapper_info'>
-      <SubHeading title="Contact" color="#FFFFFF"/>
-      <h1 className='headtext__olswald' style={{marginBottom: '3rem'}}>Trouvez nous!</h1>
+      <SubHeading title="Un cadre unique" color="#FFFFFF"/>
+      <h1 className='headtext__olswald' style={{marginBottom: '3rem'}}>Le restaurant</h1>
       <div className='app__wrapper-content'>
         <p className='p__opensans' style={{color:"#FFFFFF"}}> Royan ZOOOOOOOO</p>
         <p className='p__cormorant' style={{color:"#DCCA87", margin:"2rem 0"}}> Royan ZOOOOOOOO</p>
@@ -22,4 +23,4 @@ const FindUs = () => (
   </div>
 );
 
-export default FindUs;
+export default Restaurant;
