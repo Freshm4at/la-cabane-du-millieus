@@ -1,36 +1,47 @@
-.app__menu{
-    background: var(--color-night-blue);
+.app__menu-meal{
+    background: var(--color-prussian-blue);
 }
 
-.app__menu-header_img{
+.app__menu-meal_header-img{
     height: 100%;
     position: relative;
-    background-color: var(--color-night-blue);
 }
-.app__menu-header_img img {
+.app__menu-meal_header-img img {
     width: 100%;
     height: 450px;
     object-fit: cover;
 }
-.app__menu-header_title{
+.app__menu_header-title{
     text-align: center;
-    padding: 4rem 0 0 0;
-}
-.app__menu-header_title p {
-    padding: 1rem;
+    padding: 2rem 0 0 0;
 }
 
 .app__menu-menu img{
     width: 100%;
-    padding: 1rem 15rem 15rem 15rem;
+    padding: 1rem 15rem 0rem 15rem;
 }
+.app__menu-drink{
+    background-color: var(--color-crimson);
+}
+.app__menu-drink_header{
+    text-align: center;
+}
+.app__menu-drink_header img{
+    height: 200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.app__menu_header-title h1{
+    margin-bottom: 2rem;
+}
+
 
 @media screen and (max-width: 1000px){
     .app__menu-menu img{
         width: 100%;
         padding: 1rem 0 0 0;
     }
-    .app__menu-header_img img {
+    .app__menu_header-img img {
         width: 100%;
         height: 400px;
     }

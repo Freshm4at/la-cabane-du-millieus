@@ -22,6 +22,7 @@ import rainy from '../assets/weather/rainy.png'
 import snow from '../assets/weather/snow.png'
 import storm from '../assets/weather/storm.png'
 import sun from '../assets/weather/sun.png'
+import fisherman from '../assets/fisherman.png'
 
 
 export default {
@@ -45,8 +46,9 @@ export default {
   cloud,
   cloudy_day,
   mist,
- rainy,
- snow ,
- storm,
- sun,
+  rainy,
+  snow ,
+  storm,
+  sun,
+  fisherman,
 };
