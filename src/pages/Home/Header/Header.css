@@ -15,3 +15,9 @@
 .app__header img{
     width: 80%;
 }
+
+@media screen and (max-width: 1000px){
+    .app_header-content{
+        padding-top: 1rem;
+    }
+}
