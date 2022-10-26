@@ -1,5 +1,4 @@
 import React from 'react';
-import { useState, useEffect } from 'react'
 import axios from 'axios'
 
 import { SubHeading } from '../../../components';
@@ -61,10 +60,9 @@ const Restaurant = () => {
           <img src={weatherImg} alt="meteo_img"></img>
           <p className='p__opensans' style={{color:"#FFFFFF",'font-size':'12px'}}>{date}, {temp}°C</p>
         </div>
-        <p className='p__opensans' style={{color:"#FFFFFF"}}> Royan ZOOOOOOOO</p>
-        <p className='p__opensans' style={{color:"#FFFFFF"}}> Royan ZOOOOOOOO</p>
+        <p className='p__opensans' style={{color:"#FFFFFF"}}>Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit, Sed Do Eiusmod Tempor Incididunt Ut Labore Et Dolore Magna Aliqua.</p>
       </div>
-      <button type='button' className='custom__button' onClick={event =>  window.location.href='/contact'} ><p className='custom__button-text'>Voir sur la carte</p></button>
+      <button type='button' className='custom__button' onClick={event =>  window.location.href='/contact'} ><p className='custom__button-text'>Où nous trouver</p></button>
     </div>
     <div className='app__wrapper_img'>
       <img src={images.findus} alt="findus"/>
