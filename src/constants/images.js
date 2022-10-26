@@ -15,6 +15,13 @@ import menuButton from '../assets/buttonMenu.png'
 import boat from '../assets/boat.png'
 import seatPhoto from '../assets/seaPhoto.jpg'
 import fishPhoto from '../assets/fish_photo.jpg'
+import cloud from '../assets/weather/cloud.png'
+import cloudy_day from '../assets/weather/cloudy-day.png'
+import mist from '../assets/weather/mist.png'
+import rainy from '../assets/weather/rainy.png'
+import snow from '../assets/weather/snow.png'
+import storm from '../assets/weather/storm.png'
+import sun from '../assets/weather/sun.png'
 
 
 export default {
@@ -35,4 +42,11 @@ export default {
   boat,
   seatPhoto,
   fishPhoto,
+  cloud,
+  cloudy_day,
+  mist,
+ rainy,
+ snow ,
+ storm,
+ sun,
 };

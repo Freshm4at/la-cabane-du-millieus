@@ -1,0 +1,10 @@
+
+.app__restaurant-meteo{
+    margin: 5px 0 2rem 0;
+}
+.app__restaurant-meteo img{
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    float: left; 
+}
