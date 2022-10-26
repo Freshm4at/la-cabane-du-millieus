@@ -1,9 +1,10 @@
 import React from 'react';
-import { SubHeading } from '../../components';
+import { Map } from '../../components';
 import { images } from '../../constants';
 import './contact.css'
 
-const Contact = () => (
+const Contact = () => {
+    return(
     <div className='app__contact' id='contact'>
     <img src={images.fishPhoto} alt='fish_photo'></img>
     <div className='app_contact-content app__wrapper section__padding'>
@@ -25,11 +26,11 @@ const Contact = () => (
                 </div>
             </div>
             </div>
-            <div className='app__wrapper_img'>
-            <img src={images.welcome} alt='header img'/>
+        <div className='app__wrapper_img'>
+            <Map></Map>
         </div>
     </div>
     <p className='p__cormorant' style={{"text-align":'center',color:'#FBF5F3',padding:'2rem','font-size':'16px'}}>Ouvert du mardi au jeudi de 9h à 20h et du vendredi au samedi de 9h à 20h30 et le dimanche de 9h à 13h30.</p>
   </div>
-);
+)};
 export default Contact;
