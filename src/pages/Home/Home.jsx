@@ -1,13 +1,13 @@
 import React from 'react';
 import { AboutUs, Restaurant, Gallery, Header, Intro } from '.';
 
-const Home = ({txtLang}) => (
+const Home = () => (
     <div className='app__main'>
-      <Intro txtLang={txtLang}/>
-      <Header txtLang={txtLang}/>
-      <AboutUs txtLang={txtLang}/>
-      <Gallery txtLang={txtLang}/>
-      <Restaurant txtLang={txtLang}/>
+      <Intro />
+      <Header />
+      <AboutUs />
+      <Gallery />
+      <Restaurant />
     </div>
   );
   

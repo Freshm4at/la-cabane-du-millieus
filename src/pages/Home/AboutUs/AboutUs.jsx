@@ -4,13 +4,12 @@ import './AboutUs.css';
 import { images } from '../../../constants';
 import { SubHeading } from '../../../components';
 
-const AboutUs = ({txtLang}) => {
-  return(
+const AboutUs = () => (
   <div className='app__aboutus app__bg flex__center section__padding' id='about'>
     <div className='app__aboutus-content flex__center'>
       <div className='app__aboutus-content_about'>
-        <SubHeading title={txtLang.Pages.Acceuil.Equipe_Histoire.enTete_1} color="#DCCA87" size="30px"/>
-        <p className='p_opensans'>{txtLang.Pages.Acceuil.Equipe_Histoire.texte_1}</p>
+        <SubHeading title="L'équipe" color="#DCCA87" size="30px"/>
+        <p className='p_opensans'>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
       </div>
 
       <div className='app__aboutus-content_img flex__center'>
@@ -18,11 +17,11 @@ const AboutUs = ({txtLang}) => {
       </div>
 
       <div className='app__aboutus-content_history'>
-        <SubHeading title={txtLang.Pages.Acceuil.Equipe_Histoire.enTete_2} color="#DCCA87" size="30px"/>
-        <p className='p_opensans'>{txtLang.Pages.Acceuil.Equipe_Histoire.texte_2}</p>
+        <SubHeading title="Notre histoire" color="#DCCA87" size="30px"/>
+        <p className='p_opensans'>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
       </div>
     </div>
   </div>
-)};
+);
 
 export default AboutUs;

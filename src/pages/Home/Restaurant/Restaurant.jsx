@@ -7,7 +7,7 @@ import './Restaurant.css'
 const meteoUrl = "https://api.openweathermap.org/data/2.5/weather?lat=45.7793031477015&lon=-1.1248771891007585&appid=5b09b57f4989e1240c29d992c71ad242"
 
 
-const Restaurant = ({txtLang}) => {
+const Restaurant = () => {
   const [post, setPost] = React.useState(null);
   React.useEffect(() => {
     axios.get(meteoUrl).then((response) => {
@@ -57,10 +57,10 @@ const Restaurant = ({txtLang}) => {
   return(
   <div className='app__restaurant app__bg app__wrapper section__padding' id='restaurant'>
     <div className='app__wrapper_info'>
-      <SubHeading title={txtLang.Pages.Acceuil.LeRestaurant.enTete} color="#FFFFFF"/>
-      <h1 className='headtext__cormorant'>{txtLang.Pages.Acceuil.LeRestaurant.titre}</h1>
+      <SubHeading title="Un cadre unique" color="#FFFFFF"/>
+      <h1 className='headtext__cormorant'>Le restaurant</h1>
       <div className='app__wrapper-content'>
-      <p className='p__cormorant' style={{color:"#DCCA87", margin:"1rem 0 0 0"}}>{txtLang.Pages.Acceuil.LeRestaurant.adresse}</p>
+      <p className='p__cormorant' style={{color:"#DCCA87", margin:"1rem 0 0 0"}}> Bd Roger Letélié, 17390 La Tremblade</p>
         <div className='app__restaurant-meteo'>
           <img src={weatherImg} alt="meteo_img"></img>
           <p className='p__opensans' style={{color:"#FFFFFF",'font-size':'12px'}}>{temp}°C --- {date} {dateState.toLocaleString('fr-FR', {
@@ -69,9 +69,9 @@ const Restaurant = ({txtLang}) => {
                 hour12: true,
             })}</p>
         </div>
-        <p className='p__opensans' style={{color:"#FFFFFF"}}>{txtLang.Pages.Acceuil.LeRestaurant.texte}</p>
+        <p className='p__opensans' style={{color:"#FFFFFF"}}>Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit, Sed Do Eiusmod Tempor Incididunt Ut Labore Et Dolore Magna Aliqua.</p>
       </div>
-      <button type='button' className='custom__button' onClick={event =>  window.location.href='/contact'} ><p className='custom__button-text'>{txtLang.Pages.Acceuil.LeRestaurant.bouton}</p></button>
+      <button type='button' className='custom__button' onClick={event =>  window.location.href='/contact'} ><p className='custom__button-text'>Où nous trouver</p></button>
     </div>
     <div className='app__wrapper_img'>
       <img src={images.findus} alt="findus"/>

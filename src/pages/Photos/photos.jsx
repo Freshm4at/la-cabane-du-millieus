@@ -5,11 +5,11 @@ import { GalleryComponent } from '../../components';
 
 const galleryImages = [images.gallery01,images.gallery02,images.gallery03,images.gallery04]
 
-const photos = ({txtLang}) =>(
+const photos = () =>(
     <div className='app__photos'>
         <div className='app__photos-header'>
             <img src={images.seatPhoto} alt='sea_photo'></img>
-            <h1 className='headtext__cormorant'>{txtLang.Pages.Photos.titre}</h1>
+            <h1 className='headtext__cormorant'> Gallerie photos</h1>
         </div>
         <GalleryComponent galleyImages={galleryImages}></GalleryComponent>
     </div>

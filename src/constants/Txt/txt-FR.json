@@ -1,69 +1,47 @@
 {
-    "NavBar":{
-        "Lien_accueil":"Acceuil",
-        "Lien_menu":"Menu",
-        "titre":"La Cabane du Mil'lieus",
-        "Lien_photos":"Photos",
-        "Lien_contact":"Contact"
-    },
-    "Pages":{
-        "Acceuil":{
-            "Intro":{
-                "enTete":"Decouvrer L'authenticité",
-                "titre":"De la mer à l'assiette",
-                "texte":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-                "bouton":"Parcourir le menu"
-            },
-            "Equipe_Histoire":{
-                "enTete_1":"L'équipe",
-                "texte_1":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-                "enTete_2":"Notre histoire",
-                "texte_2":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-            },
-            "Photos":{
-                "enTete":"Des plats maisons",
-                "titre":"Photos",
-                "texte":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-                "bouton":"Decouvrir nos plats"
-            },
-            "LeRestaurant":{
-                "enTete":"Un cadre unique",
-                "titre":"Le Restaurant",
-                "adresse":"Bd Roger Letélié, 17390 La Tremblade",
-                "texte":"Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit, Sed Do Eiusmod Tempor Incididunt Ut Labore Et Dolore Magna Aliqua.",
-                "bouton":"Où nous trouver"
-            }
-        },
-        "Menu":{
-            "titre_1":"La Carte Du Moment",
-            "sous_titre":"Frais et fais maison !",
-            "titre_2":"Vins Et Boissons"
-        },
-        "Photos":{
-            "titre":"Gallerie Photos"
-        },
-        "Contact":{
-            "titre":"Où nous trouver ?",
-            "titre_adresse":"Adresse :",
-            "adresse_rue":"Bd Roger Letélié,",
-            "adresse_ville":"17390 La Tremblade",
-            "titre_tel":"Téléphone :",
-            "tel":"0636554760",
-            "titre_email":"Email :",
-            "email":"Fernandesvalenton@hotmail.com",
-            "texte_horraire":"Ouvert du mardi au jeudi de 9h à 20h et du vendredi au samedi de 9h à 20h30 et le dimanche de 9h à 13h30."
-        }
-    },
-    "BasPage":{
-        "titre_contact":"Contact",
-        "contact_tel":"0636554760",
-        "contact_email":"Fernandesvalenton@hotmail.com",
-        "titre":"La Cabane Du Mil'lieus",
-        "titre_horraire":"Hoirraire d'ouverture",
-        "titre_horraire_semaine":"Lundi-Vendredi",
-        "horraire_semaine":"11h00 à 23h00",
-        "titre_horraire_weekend":"Samedi-Dimanche",
-        "horraire_weekend":"14h00 à 23h00",
-        "droits":"2022 La Cabane du Mil'Lieus, Tout droits réservés."
-    }
+"NavBar_Lien_accueil":"Acceuil",
+"NavBar_Lien_menu":"Menu",
+"NavBar_titre":"La Cabane du Mil'lieus",
+"NavBar_Lien_photos":"Photos",
+"NavBar_Lien_contact":"Contact",
+"Intro_enTete":"Decouvrer L'authenticité",
+"Intro_titre":"De la mer à l'assiette",
+"Intro_texte":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+"Intro_bouton":"Parcourir le menu",
+"Equipe_Histoire_enTete_1":"L'équipe",
+"Equipe_Histoire_texte_1":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+"Equipe_Histoire_enTete_2":"Notre histoire",
+"Equipe_Histoire_texte_2":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+"Photos_enTete":"Des plats maisons",
+"Photos_titre":"Photos",
+"Photos_texte":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+"Photos_bouton":"Decouvrir nos plats",
+"LeRestaurant_enTete":"Un cadre unique",
+"LeRestaurant_titre":"Le Restaurant",
+"LeRestaurant_adresse":"Bd Roger Letélié, 17390 La Tremblade",
+"LeRestaurant_texte":"Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit, Sed Do Eiusmod Tempor Incididunt Ut Labore Et Dolore Magna Aliqua.",
+"LeRestaurant_bouton":"Où nous trouver",
+"Menu_titre_1":"La Carte Du Moment",
+"Menu_sous_titre":"Frais et fais maison !",
+"Menu_titre_2":"Vins Et Boissons",
+"Gallerie_titre":"Gallerie Photos",
+"Contact_titre":"Où nous trouver ?",
+"Contact_titre_adresse":"Adresse :",
+"Contact_adresse_rue":"Bd Roger Letélié,",
+"Contact_adresse_ville":"17390 La Tremblade",
+"Contact_titre_tel":"Téléphone :",
+"Contact_tel":"0636554760",
+"Contact_titre_email":"Email :",
+"Contact_email":"Fernandesvalenton@hotmail.com",
+"Contact_texte_horraire":"Ouvert du mardi au jeudi de 9h à 20h et du vendredi au samedi de 9h à 20h30 et le dimanche de 9h à 13h30.",
+"BasPage_titre_contact":"Contact",
+"BasPage_contact_tel":"0636554760",
+"BasPage_contact_email":"Fernandesvalenton@hotmail.com",
+"BasPage_titre":"La Cabane Du Mil'lieus",
+"BasPage_titre_horraire":"Hoirraire d'ouverture",
+"BasPage_titre_horraire_semaine":"Lundi-Vendredi",
+"BasPage_horraire_semaine":"11h00 à 23h00",
+"BasPage_titre_horraire_weekend":"Samedi-Dimanche",
+"BasPage_horraire_weekend":"14h00 à 23h00",
+"BasPage_droits":"2022 La Cabane du Mil'Lieus, Tout droits réservés."
 }
