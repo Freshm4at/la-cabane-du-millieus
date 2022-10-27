@@ -3,6 +3,7 @@ import './GalleryComponent.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCircleChevronLeft,faCircleChevronRight, faCircleXmark } from '@fortawesome/free-solid-svg-icons' 
 import { useSwipeable } from 'react-swipeable'
+import CustomImage from '../Tools/CustomImage/CustomImage'
 
 const GalleryComponent = ({galleyImages}) => {
     const [slideNumber, setSlideNumber] = useState(0)
@@ -51,11 +52,7 @@ const GalleryComponent = ({galleyImages}) => {
                 return(
                     <div className='single' key={`gallery_slide-${index+1}`}
                     onClick={ ()=> handleOpenModal(index)}>
-                        <div className="app__img-render" style={{height:'200px',width:'200px'}}>
-                            <div className="app__square-up"></div>
-                                <img src={slide} alt='slides'></img>
-                            <div className="app__square-down"></div>
-                        </div>
+                        <CustomImage src={slide} alt='slide' height={200} width={200}/>
                     </div>
                 )
             })

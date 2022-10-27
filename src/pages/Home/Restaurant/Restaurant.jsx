@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import axios from 'axios'
 
 import { SubHeading } from '../../../components';
@@ -49,6 +49,11 @@ const Restaurant = () => {
 
     }
   }
+
+  const [dateState, setDateState] = useState(new Date());
+  useEffect(() => {
+         setInterval(() => setDateState(new Date()), 30000);
+  }, []);
   return(
   <div className='app__restaurant app__bg app__wrapper section__padding' id='restaurant'>
     <div className='app__wrapper_info'>
@@ -58,7 +63,11 @@ const Restaurant = () => {
       <p className='p__cormorant' style={{color:"#DCCA87", margin:"1rem 0 0 0"}}> Bd Roger Letélié, 17390 La Tremblade</p>
         <div className='app__restaurant-meteo'>
           <img src={weatherImg} alt="meteo_img"></img>
-          <p className='p__opensans' style={{color:"#FFFFFF",'font-size':'12px'}}>{date}, {temp}°C</p>
+          <p className='p__opensans' style={{color:"#FFFFFF",'font-size':'12px'}}>{temp}°C --- {date} {dateState.toLocaleString('fr-FR', {
+                hour: 'numeric',
+                minute: 'numeric',
+                hour12: true,
+            })}</p>
         </div>
         <p className='p__opensans' style={{color:"#FFFFFF"}}>Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit, Sed Do Eiusmod Tempor Incididunt Ut Labore Et Dolore Magna Aliqua.</p>
       </div>

@@ -113,36 +113,6 @@
   text-transform: capitalize;
 }
 
-.app__img-render{
-  display:flex;
-  position: relative;
-  text-align: center;
-  z-index: 4;
-}
-.app__img-render img{
-  position: absolute;
-  top: 10%;
-  left: 10%;
-  width: 80%;
-  height: 80%;
-  z-index: 5;
-}
-.app__square-up{
-  background-color: var(--color-golden);
-  margin-top: 5%;
-  margin-left: 5%;
-  height: 50%;
-  width: 90%;
-  z-index: 4;
-}
-.app__square-down{
-  background-color: var(--color-prussian-blue);
-  height: 50%;
-  width: 90%;
-  margin-right: 5%;
-  margin-top: 45%
-}
-
 @media screen and (min-width: 2000px) {
   .custom__button,
   .p__cormorant {

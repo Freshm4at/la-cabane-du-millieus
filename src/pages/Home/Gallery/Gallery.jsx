@@ -19,8 +19,8 @@ const Gallery = () => {
   }
 
   return(
-  <div className='app__gallery flex__center'>
-    <div className='app__gallery-content'>
+  <div className='app__gallery flex__center '>
+    <div className='app__gallery-content section__padding'>
       <SubHeading title="Des plats maisons"/>
       <h1 className='headtext__cormorant'>Photos</h1>
       <p className='p__opensans' style={{marginTop: "2rem"}}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
@@ -29,7 +29,7 @@ const Gallery = () => {
     <div className='app__gallery-images'>
       <div className='app__gallery-images_container'>
         {galleryImages.map((image,index) =>
-          <div className='app__gallery-images_card flax__center' key={`gallery_image-${index+1}`}>
+          <div className='app__gallery-images_card flex__center' key={`gallery_image-${index+1}`}>
             <img src={image} alt='gallery'/>
           </div>
         )}

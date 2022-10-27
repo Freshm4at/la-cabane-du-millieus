@@ -1,6 +1,7 @@
 import React from 'react';
 import './Menu.css';
 import { images } from '../../constants';
+import CustomImage from '../../components/Tools/CustomImage/CustomImage';
 
 const Menu = () => (
     <div className='app__menu'>
