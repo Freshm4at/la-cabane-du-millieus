@@ -6,7 +6,7 @@ import { SubHeading } from '../../../components';
 import { images } from '../../../constants';
 const galleryImages = [images.gallery01,images.gallery02,images.gallery03,images.gallery04]
 
-const Gallery = () => {
+const Gallery = ({txtLang}) => {
   const scrollRef = React.useRef(null)
   const scroll = (direction) =>{
     const current = scrollRef;
@@ -21,10 +21,10 @@ const Gallery = () => {
   return(
   <div className='app__gallery flex__center '>
     <div className='app__gallery-content section__padding'>
-      <SubHeading title="Des plats maisons"/>
-      <h1 className='headtext__cormorant'>Photos</h1>
-      <p className='p__opensans' style={{marginTop: "2rem"}}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-      <button type='button' className='custom__button' onClick={event =>  window.location.href='/photos'}><p className='custom__button-text'>Decouvrir nos plats</p></button>
+      <SubHeading title={txtLang.Pages.Acceuil.Photos.enTete}/>
+      <h1 className='headtext__cormorant'>{txtLang.Pages.Acceuil.Photos.titre}</h1>
+      <p className='p__opensans' style={{marginTop: "2rem"}}>{txtLang.Pages.Acceuil.Photos.texte}</p>
+      <button type='button' className='custom__button' onClick={event =>  window.location.href='/photos'}><p className='custom__button-text'>{txtLang.Pages.Acceuil.Photos.bouton}</p></button>
     </div>
     <div className='app__gallery-images'>
       <div className='app__gallery-images_container'>
