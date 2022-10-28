@@ -26,6 +26,9 @@
     flex:1;
     text-align: center;
 }
+.app__footer-links_logo{
+    flex-direction: column;
+}
 .app__footer-links_logo p {
     font-size: 30px;
     font-family: var(--font-bold);
@@ -45,9 +48,7 @@
     color: var(--color-gold);
 }
 
-.app__footer-links_works{
-    margin-left: 2rem;
-}
+
 
 .app__footer-links_works p{
     text-align: center;

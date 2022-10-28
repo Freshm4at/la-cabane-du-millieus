@@ -1,6 +1,7 @@
 .app__langselector img{
-    width: 20px;
-    height: 20px;
+    width: 30px;
+    height: 30px;
+    margin: 5px;
 }
 .app__langselector{
     padding-top: 1rem;

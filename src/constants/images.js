@@ -26,10 +26,17 @@ import fisherman from '../assets/fisherman.png'
 import pin from '../assets/location-pin.png'
 import fr from '../assets/fr.png'
 import en from '../assets/en.png'
-import globe from '../assets/globe.png'
+import de from '../assets/de.png'
+import fr_grey from '../assets/fr_grey.png'
+import en_grey from '../assets/en_grey.png'
+import de_grey from '../assets/de_grey.png'
+
 
 
 export default {
+  fr_grey,
+  en_grey,
+  de_grey,
   bg,
   gallery01,
   gallery02,
@@ -58,5 +65,5 @@ export default {
   pin,
   fr,
   en,
-  globe,
+  de,
 };
