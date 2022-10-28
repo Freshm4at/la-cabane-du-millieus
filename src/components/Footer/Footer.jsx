@@ -8,8 +8,8 @@ import './Footer.css';
 const Footer = () => {
   const {t} = useTranslation()
   return(
-  <div className='app__footer section__padding'>
-    <div className='app__footer-links flex__center'>
+  <div className='app__footer '>
+    <div className='app__footer-links'>
       <div className='app__footer-links_contact' >
         <h1 className='app__footer-headtext'>{t('BasPage_titre_contact')}</h1>
         <p className='p__opensans'>{t('BasPage_contact_tel')}</p>
