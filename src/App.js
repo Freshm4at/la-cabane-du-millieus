@@ -11,6 +11,7 @@ const Home = lazy(()=> import('./pages/Home/Home'))
 const Menu = lazy(()=> import('./pages/Menu/Menu'))
 const Photos = lazy(()=> import('./pages/Photos/photos'))
 const Contact = lazy(()=> import('./pages/Contact/contact'))
+const Admin = lazy(()=> import('./pages/Admin/Admin'))
 
 i18n
   .use(initReactI18next)
@@ -46,6 +47,7 @@ const App = () => (
           <Route exact path='/menu' element={<Menu />}></Route>
           <Route exact path='/photos' element={<Photos />}></Route>
           <Route exact path='/contact' element={<Contact />}></Route>
+          <Route exact path='/admin' element={<Admin />}></Route>
       </Routes>
     </Suspense>
     <Footer/>
