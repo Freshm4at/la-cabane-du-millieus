@@ -2,6 +2,7 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 import { images } from '../../constants';
+import LangSelector from '../LangSelector/LangSelector';
 
 import './Footer.css';
 const Footer = () => {
@@ -30,7 +31,8 @@ const Footer = () => {
     </div>
     <div className='app__footer-copyright'>
         <p className='p__opensans'>{t('BasPage_droits')}</p>
-      </div>
+      <LangSelector/>
+    </div>
   </div>
 )};
 

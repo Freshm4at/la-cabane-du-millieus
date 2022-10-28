@@ -115,6 +115,9 @@ Add animation to smooth transition */
 
 /* ### SMALLSCREEN ADJUSTEMENT FOR SCREEN WIDTH */
 @media screen and (max-width: 1000px){
+    .app__navbar-lang{
+        display: none;
+    }
     .app__navbar-links li{
         display: none;
     }

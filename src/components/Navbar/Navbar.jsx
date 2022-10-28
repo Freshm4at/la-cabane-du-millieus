@@ -3,9 +3,9 @@ import { useTranslation } from 'react-i18next';
 import { MdOutlineRestaurantMenu}  from 'react-icons/md'
 import { NavLink as Link } from "react-router-dom";
 import images from '../../constants/images'
-import LangSelector from '../LangSelector/LangSelector';
-import Dropdown from '../LangSelector/LangSelector';
+import 'react-dropdown/style.css';
 import './Navbar.css';
+
 
 const Navbar = () => {
   const [toggleMenu, setToggleMenu] = React.useState(false);
@@ -23,7 +23,6 @@ const Navbar = () => {
         <li className='p__opensans'><Link to='/photos'>{t('NavBar_Lien_photos')}</Link></li>
         <li className='p__opensans'><Link to='/contact'>{t('NavBar_Lien_contact')}</Link></li>
       </ul>
-      <LangSelector></LangSelector>
       <div className='app__navbar-smallscreen'>
         <img src={images.menuButton} onClick={()=> {setToggleMenu(true)}} alt='menu_button'/>
         {toggleMenu && (

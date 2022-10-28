@@ -43,5 +43,6 @@
     "BasPage_horraire_semaine":"11 a.m. to 11 p.m.",
     "BasPage_titre_horraire_weekend":"Saturday-Sunday",
     "BasPage_horraire_weekend":"2 p.m. to 11 p.m.",
-    "BasPage_droits":"2022 La Cabane du Mil'Lieus, All rights reserved."
+    "BasPage_droits":"2022 La Cabane du Mil'Lieus, All rights reserved.",
+    "language": "English"
 }

@@ -5,6 +5,7 @@ import Footer from './Footer/Footer';
 import ScrollToTop from './Tools/ScrollToTop';
 import Map from './Map/map'
 import CustomImage from './Tools/CustomImage/CustomImage';
+import LangSelector from './LangSelector/LangSelector'
 export {
   SubHeading,
   Navbar,
@@ -13,4 +14,5 @@ export {
   ScrollToTop,
   Map,
   CustomImage,
+  LangSelector,
 };
