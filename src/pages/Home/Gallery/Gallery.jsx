@@ -4,6 +4,7 @@ import { BsArrowLeftShort,BsArrowRightShort } from 'react-icons/bs';
 import './Gallery.css';
 import { SubHeading } from '../../../components';
 import { images } from '../../../constants';
+import { useTranslation } from 'react-i18next';
 const galleryImages = [images.gallery01,images.gallery02,images.gallery03,images.gallery04]
 
 const Gallery = () => {
@@ -17,14 +18,15 @@ const Gallery = () => {
       current.scrollLeft += 300
     }
   }
+  const {t} = useTranslation()
 
   return(
   <div className='app__gallery flex__center '>
     <div className='app__gallery-content section__padding'>
-      <SubHeading title="Des plats maisons"/>
-      <h1 className='headtext__cormorant'>Photos</h1>
-      <p className='p__opensans' style={{marginTop: "2rem"}}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-      <button type='button' className='custom__button' onClick={event =>  window.location.href='/photos'}><p className='custom__button-text'>Decouvrir nos plats</p></button>
+      <SubHeading title={t("Photos_enTete")}/>
+      <h1 className='headtext__cormorant'>{t("Photos_titre")}</h1>
+      <p className='p__opensans' style={{marginTop: "2rem"}}>{t("Photos_texte")}</p>
+      <button type='button' className='custom__button' onClick={event =>  window.location.href='/photos'}><p className='custom__button-text'>{t("Photos_bouton")}</p></button>
     </div>
     <div className='app__gallery-images'>
       <div className='app__gallery-images_container'>
