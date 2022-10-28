@@ -3,8 +3,9 @@ import './App.css';
 import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import { Navbar, Footer,ScrollToTop} from './components';
 import i18n from "i18next";
-import { useTranslation, initReactI18next } from "react-i18next";
-import { translation_en, translation_fr } from './constants';
+import { initReactI18next } from "react-i18next";
+import LanguageDetector from 'i18next-browser-languagedetector';
+import HttpApi from 'i18next-http-backend';
 
 const Home = lazy(()=> import('./pages/Home/Home'))
 const Menu = lazy(()=> import('./pages/Menu/Menu'))
@@ -13,17 +14,19 @@ const Contact = lazy(()=> import('./pages/Contact/contact'))
 
 i18n
   .use(initReactI18next)
+  .use(LanguageDetector)
+  .use(HttpApi)
   .init({
-    resources: {
-      fr: {
-        translation: translation_fr
-      },
-      en:{
-        translation: translation_en
-      }
-    },
-    lng: document.querySelector('html').lang,
+    supportedLngs: ['fr','en'],
     fallbackLng: "fr",
+    detection:{
+      order: ['htmlTag','cookie', 'localStorage'],
+      cache:['cookie']
+    },
+    backend:{
+      loadPath: '/assets/locales/{{lng}}/translation.json'
+    },
+    react:{useSuspense:false},
 
     interpolation: {
       escapeValue: false

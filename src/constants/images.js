@@ -24,6 +24,9 @@ import storm from '../assets/weather/storm.png'
 import sun from '../assets/weather/sun.png'
 import fisherman from '../assets/fisherman.png'
 import pin from '../assets/location-pin.png'
+import fr from '../assets/fr.png'
+import en from '../assets/en.png'
+import globe from '../assets/globe.png'
 
 
 export default {
@@ -53,4 +56,7 @@ export default {
   sun,
   fisherman,
   pin,
+  fr,
+  en,
+  globe,
 };
