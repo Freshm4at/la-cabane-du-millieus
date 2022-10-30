@@ -6,6 +6,7 @@ import ScrollToTop from './Tools/ScrollToTop';
 import Map from './Map/map'
 import CustomImage from './Tools/CustomImage/CustomImage';
 import LangSelector from './LangSelector/LangSelector'
+import Waves from './Waves/Waves';
 export {
   SubHeading,
   Navbar,
@@ -15,4 +16,5 @@ export {
   Map,
   CustomImage,
   LangSelector,
+  Waves,
 };
