@@ -4,8 +4,6 @@ const cors = require("cors");
 const multer = require('multer');
 const bodyParser = require('body-parser');
 
-
-//ADD BODY-PARSER CODE
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
@@ -30,10 +28,10 @@ const storage = multer.diskStorage({
 const imageUpload = multer({storage: storage})
 
 app.post('/image-upload', imageUpload.array("my-image-file"), (req, res) => {
-    console.log('POST request received to /image-upload.');
-    console.log('Axios POST body: ', req.body);
-    res.send('POST request recieved on server to /image-upload.');
-  })
+  console.log('POST request received to /image-upload.');
+  console.log('Axios POST body: ', req.body);
+  res.send('POST request recieved on server to /image-upload.');
+})
 
 const port = 4000;
 app.listen(port, process.env.IP, function(){
