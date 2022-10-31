@@ -29,14 +29,39 @@ const Admin = () => {
         setImg(URL.createObjectURL(e.target.files[0]))
     
       }
+  const handleChange = () => { 
+
+    console.log('The checkbox was toggled'); 
+    
+  }; 
 
   return (
     <div className="app__admin">
         <img src={images.fishPhoto}></img>
+        <h1 className='headtext__cormorant' style={{'text-align':'center',padding:'1rem'}}>Admin Panel</h1>
         <div className='app__admin-upload flex__center'>
-          <h1 className='headtext__cormorant'>Admin</h1>
+          <p className='p__opensans' style={{"font-size":'50px',"padding-bottom":'2rem'}}>Changer une image</p>
           <input type="file" onChange={getFileInfo}></input>
           <img src={img} alt='upload_img'/>
+          <button type='button' className='custom__button' onClick={HandleClick}><p className='custom__button-text'>Upload</p></button>
+        </div>
+        <div className='app__admin-upload flex__center'>
+          <p className='p__opensans' style={{"font-size":'50px',"padding-bottom":'2rem'}}>Changer le text</p>
+          <div className='app__admin-upload-checkbox flex__center'>
+            <div>
+              <input type="checkbox" id="txtFR" name="txtFR" onChange={handleChange}/>
+              <label for="scales" style={{color:'black','margin':'1rem'}}>FR</label>
+            </div>
+            <div>
+              <input type="checkbox" id="txtEN" name="txtFEN" onChange={handleChange}/>
+              <label for="scales" style={{color:'black','margin':'1rem'}}>EN</label>
+            </div>
+            <div>
+              <input type="checkbox" id="txtDE" name="txtDE" onChange={handleChange}/>
+              <label for="scales" style={{color:'black','margin':'1rem'}}>DE</label>
+            </div>
+          </div>
+          <input type="file" onChange={getFileInfo}></input>
           <button type='button' className='custom__button' onClick={HandleClick}><p className='custom__button-text'>Upload</p></button>
         </div>
     </div>
