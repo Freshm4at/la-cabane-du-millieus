@@ -6,6 +6,7 @@ import { useState } from 'react';
 
 const Admin = () => {
   const [image, setImage] = useState(null);
+  const [img,setImg] = useState(null)
   const HandleClick = () => {
     axios.post('http://localhost:4000/image-upload', image)
     .then(res => {
@@ -25,6 +26,7 @@ const Admin = () => {
         //FILE INFO NAME WILL BE "my-image-file"
         formData.append('my-image-file', e.target.files[0], e.target.files[0].name);
         setImage(formData);
+        setImg(URL.createObjectURL(e.target.files[0]))
     
       }
 
@@ -34,7 +36,7 @@ const Admin = () => {
         <div className='app__admin-upload flex__center'>
           <h1 className='headtext__cormorant'>Admin</h1>
           <input type="file" onChange={getFileInfo}></input>
-          <img src={image}/>
+          <img src={img} alt='upload_img'/>
           <button type='button' className='custom__button' onClick={HandleClick}><p className='custom__button-text'>Upload</p></button>
         </div>
     </div>
