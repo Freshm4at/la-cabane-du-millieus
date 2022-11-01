@@ -31,9 +31,7 @@ import fr_grey from '../assets/fr_grey.png'
 import en_grey from '../assets/en_grey.png'
 import de_grey from '../assets/de_grey.png'
 
-
-
-export default {
+const images =  {
   fr_grey,
   en_grey,
   de_grey,
@@ -67,3 +65,6 @@ export default {
   en,
   de,
 };
+
+
+export default images

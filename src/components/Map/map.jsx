@@ -1,7 +1,6 @@
 import React from "react";
 import GoogleMapReact from 'google-map-react';
 import './map.css'
-import { images } from "../../constants";
 
 
 export default function map(){

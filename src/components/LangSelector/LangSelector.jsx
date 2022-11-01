@@ -13,6 +13,7 @@ const LangSelector = () => {
   const [image_de, setImage_de] = useState(
     images.de_grey
   );
+
   
   const handleClick = (e) => {
     console.log('click')
@@ -57,6 +58,19 @@ const LangSelector = () => {
           images.de
         );
         break
+        default:
+          document.querySelector('html').lang = 'fr'
+        i18next.changeLanguage('fr')
+        setImage_fr(
+          images.fr
+        );
+        setImage_en(
+          images.en_grey
+        );
+        setImage_de(
+          images.de_grey
+        );
+          break
     }
   };
     

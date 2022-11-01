@@ -2,13 +2,10 @@ import React, { useState } from 'react'
 import './GalleryComponent.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCircleChevronLeft,faCircleChevronRight, faCircleXmark } from '@fortawesome/free-solid-svg-icons' 
-import { useSwipeable } from 'react-swipeable'
 import CustomImage from '../Tools/CustomImage/CustomImage'
 
 const GalleryComponent = ({galleyImages}) => {
     const [slideNumber, setSlideNumber] = useState(0)
-    const [touchStart, setTouchStart] = useState(0);
-    const [touchEnd, setTouchEnd] = useState(0);
     const [openModal,setOpenModal] = useState(false)
 
     const handleOpenModal = (index) =>{
@@ -29,11 +26,6 @@ const GalleryComponent = ({galleyImages}) => {
         ? setSlideNumber(0) 
         : setSlideNumber(slideNumber+1)
     }
-    const [stopScroll, setStopScroll] = useState(false);
-    const handlers = useSwipeable({
-        onSwipeStart: () => setStopScroll(true),
-        onSwiped: () => setStopScroll(false)
-    });
 
   return (
     <div>
@@ -43,7 +35,7 @@ const GalleryComponent = ({galleyImages}) => {
                 <FontAwesomeIcon icon={faCircleChevronLeft} className='btnPrev' onClick={prevSlide}/>
                 <FontAwesomeIcon icon={faCircleChevronRight} className='btnNext' onClick={nextSlide}/>
                 <div className='fullscreenImage'>
-                    <img src={galleyImages[slideNumber]} alt='' onClick={handleCloseModal} style={{ touchAction: stopScroll ? 'none' : 'auto' }}></img>
+                    <img src={galleyImages[slideNumber]} alt='' onClick={handleCloseModal}></img>
                 </div>
             </div>
         }

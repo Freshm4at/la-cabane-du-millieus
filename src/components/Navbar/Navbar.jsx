@@ -3,7 +3,6 @@ import { useTranslation } from 'react-i18next';
 import { MdOutlineRestaurantMenu}  from 'react-icons/md'
 import { NavLink as Link } from "react-router-dom";
 import images from '../../constants/images'
-import 'react-dropdown/style.css';
 import './Navbar.css';
 
 

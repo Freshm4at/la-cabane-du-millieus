@@ -37,7 +37,7 @@ const Admin = () => {
 
   return (
     <div className="app__admin">
-        <img src={images.fishPhoto}></img>
+        <img src={images.fishPhoto} alt='img_seafish'></img>
         <h1 className='headtext__cormorant' style={{'text-align':'center',padding:'1rem'}}>Admin Panel</h1>
         <div className='app__admin-upload flex__center'>
           <p className='p__opensans' style={{"font-size":'50px',"padding-bottom":'2rem'}}>Changer une image</p>
@@ -46,7 +46,7 @@ const Admin = () => {
           <button type='button' className='custom__button' onClick={HandleClick}><p className='custom__button-text'>Upload</p></button>
         </div>
         <div className='app__admin-upload flex__center'>
-          <p className='p__opensans' style={{"font-size":'50px',"padding-bottom":'2rem'}}>Changer le text</p>
+          <p className='p__opensans' style={{"font-size":'50px',"padding-bottom":'2rem'}}>Changer les textes</p>
           <div className='app__admin-upload-checkbox flex__center'>
             <div>
               <input type="checkbox" id="txtFR" name="txtFR" onChange={handleChange}/>
