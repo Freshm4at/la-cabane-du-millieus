@@ -3,6 +3,7 @@ const app = express();
 const cors = require("cors");
 const multer = require('multer');
 const bodyParser = require('body-parser');
+const path = require('path')
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
@@ -13,11 +14,13 @@ app.use(cors({
   methods:['GET','POST'],
   credentials: true 
 })); 
+dirname = path.join(process.cwd(),'../')
+console.log(dirname)
 
-const imageUploadPath = 'C:/Users/v.fernandes/la-cabane-du-millieus/src/assets';
-const txtFRUploadPath = 'C:/Users/v.fernandes/la-cabane-du-millieus/public/assets/locales/fr';
-const txtENUploadPath = 'C:/Users/v.fernandes/la-cabane-du-millieus/public/assets/locales/en';
-const txtDEUploadPath = 'C:/Users/v.fernandes/la-cabane-du-millieus/public/assets/locales/de';
+const imageUploadPath = dirname + '/src/assets';
+const txtFRUploadPath = dirname + '/public/assets/locales/fr';
+const txtENUploadPath = dirname + '/public/assets/locales/en';
+const txtDEUploadPath = dirname + '/public/assets/locales/de';
 
 const storageFile = (path) => (
   multer.diskStorage({
@@ -40,17 +43,17 @@ app.post('/image-upload', imageUpload.array("my-image-file"), (req, res) => {
   console.log('Axios POST body: ', req.body);
   res.send('POST request recieved on server to /image-upload.');
 })
-app.post('/txt-upload-fr', txtFRUpload.array("my-txt-file"), (req, res) => {
-  console.log('POST request received to /txt-upload-fr.');
+app.post('/txt-upload-fr', txtFRUpload.array('my-image-file'), (req, res) => {
+  console.log('POST request received to /txt-upload-en.');
   console.log('Axios POST body: ', req.body);
   res.send('POST request recieved on server to /txt-upload-fr.');
 })
-app.post('/txt-upload-en', txtENUpload.array("my-txt-file"), (req, res) => {
+app.post('/txt-upload-en', txtENUpload.array('my-image-file'), (req, res) => {
   console.log('POST request received to /txt-upload-en.');
   console.log('Axios POST body: ', req.body);
   res.send('POST request recieved on server to /txt-upload-en.');
 })
-app.post('/txt-upload-de', txtDEUpload.array("my-txt-file"), (req, res) => {
+app.post('/txt-upload-de', txtDEUpload.array('my-image-file'), (req, res) => {
   console.log('POST request received to /txt-upload-de.');
   console.log('Axios POST body: ', req.body);
   res.send('POST request recieved on server to /txt-upload-de.');
