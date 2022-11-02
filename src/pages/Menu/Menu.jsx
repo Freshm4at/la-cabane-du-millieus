@@ -5,6 +5,7 @@ import { useTranslation } from 'react-i18next';
 
 const Menu = () => {
   const {t} = useTranslation()
+
   return(
     <div className='app__menu'>
       <div className='app__menu-meal'>
@@ -16,7 +17,7 @@ const Menu = () => {
           <p className='p__opensans' style={{color:'#DCCA87'}}>{t('Menu_sous_titre')}</p>
         </div>
         <div className='app__menu-menu'>
-          <img src={images.menuMap} alt='menu'></img>
+            <img src={images.menuMap} alt='menu' id='menu_img'/>
         </div>
       </div>
       <div className='app__menu-drink'>
