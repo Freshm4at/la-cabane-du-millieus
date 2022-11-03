@@ -38,13 +38,14 @@ const txtFRUpload = multer({storage: storageFile(txtFRUploadPath)})
 const txtENUpload = multer({storage: storageFile(txtENUploadPath)})
 const txtDEUpload = multer({storage: storageFile(txtDEUploadPath)})
 
+
 app.post('/image-upload', imageUpload.array("my-image-file"), (req, res, next) => {
   console.log('POST request received to /image-upload.');
   console.log('Axios POST body: ', req.body);
   res.send('POST request recieved on server to /image-upload.');
 })
 app.post('/txt-upload-fr', txtFRUpload.array('my-image-file'), (req, res, next) => {
-  console.log('POST request received to /txt-upload-en.');
+  console.log('POST request received to /txt-upload-fr.');
   console.log('Axios POST body: ', req.body);
   res.send('POST request recieved on server to /txt-upload-fr.');
 })

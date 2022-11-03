@@ -17,20 +17,43 @@ const Admin = () => {
   const [lang, setLang] = useState(null);
   const [txt,setTxt] = useState(null)
 
+  const header = {
+    headers: {
+      'content-type': 'multipart/form-data',
+      'token':localStorage.getItem("token") 
+    },
+  };
   const handleChange = (event) => {
     setLang(event.target.value);
   };
   const handleClickTxt = () =>{
-    axios.post(`http://localhost:4000/txt-upload-${lang}`, txt)
-    .then(res => {
-      console.log('Axios response: ', res)
+    axios.post(`http://localhost:4000/auth`, {
+      auth:localStorage.getItem("token") 
     })
+    .then(res => {
+      if(res.data.auth==='true'){
+        console.log('ok')
+        axios.post(`http://localhost:4000/txt-upload-${lang}`, txt)
+        .then(res => {
+          console.log('Axios response: ', res)
+        })
+      }
+    })
+    
   }
 
   const HandleClickImg = () => {
-    axios.post('http://localhost:4000/image-upload', image)
+    axios.post(`http://localhost:4000/auth`, {
+      auth:localStorage.getItem("token") 
+    })
     .then(res => {
-      console.log('Axios response: ', res)
+      if(res.data.auth==='true'){
+        console.log('ok')
+        axios.post(`http://localhost:4000/image-upload`, image)
+        .then(res => {
+          console.log('Axios response: ', res)
+        })
+      }
     })
   }
   const getFileInfo = (e) => {
