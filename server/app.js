@@ -38,32 +38,41 @@ const txtFRUpload = multer({storage: storageFile(txtFRUploadPath)})
 const txtENUpload = multer({storage: storageFile(txtENUploadPath)})
 const txtDEUpload = multer({storage: storageFile(txtDEUploadPath)})
 
-app.post('/image-upload', imageUpload.array("my-image-file"), (req, res) => {
+app.post('/image-upload', imageUpload.array("my-image-file"), (req, res, next) => {
   console.log('POST request received to /image-upload.');
   console.log('Axios POST body: ', req.body);
   res.send('POST request recieved on server to /image-upload.');
 })
-app.post('/txt-upload-fr', txtFRUpload.array('my-image-file'), (req, res) => {
+app.post('/txt-upload-fr', txtFRUpload.array('my-image-file'), (req, res, next) => {
   console.log('POST request received to /txt-upload-en.');
   console.log('Axios POST body: ', req.body);
   res.send('POST request recieved on server to /txt-upload-fr.');
 })
-app.post('/txt-upload-en', txtENUpload.array('my-image-file'), (req, res) => {
+app.post('/txt-upload-en', txtENUpload.array('my-image-file'), (req, res, next) => {
   console.log('POST request received to /txt-upload-en.');
   console.log('Axios POST body: ', req.body);
   res.send('POST request recieved on server to /txt-upload-en.');
 })
-app.post('/txt-upload-de', txtDEUpload.array('my-image-file'), (req, res) => {
+app.post('/txt-upload-de', txtDEUpload.array('my-image-file'), (req, res, next) => {
   console.log('POST request received to /txt-upload-de.');
   console.log('Axios POST body: ', req.body);
   res.send('POST request recieved on server to /txt-upload-de.');
 })
-app.post('/login',(req,res) =>{
+app.post('/login',(req,res, next) =>{
   console.log('POST request received to /login');
-  if(req.body.user === 'auriel' && req.body.password==='test'){
+  if(req.body.user === 'aurelien' && req.body.password==='test'){
     console.log('auth succes');
-    res.send({'token':'McQfTjWnZr4t7w!z%C*F-JaNdRgUkXp2'});
-  } 
+    res.send({'auth':'true','token':'McQfTjWnZr4t7w!z%C*F-JaNdRgUkXp2'});
+  }else{
+    console.log('auth failed');
+    res.send({'auth':'false','token':''});
+  }
+})
+app.post('/auth',(req,res, next) =>{
+  console.log('POST request received to /auth');
+  if(req.body.auth === 'McQfTjWnZr4t7w!z%C*F-JaNdRgUkXp2'){
+    res.send({'auth':'true'});
+  }
 })
 
 const port = 4000

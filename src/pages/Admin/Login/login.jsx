@@ -3,6 +3,7 @@ import React, { Component } from "react";
 import "./login.css";
 import { Navigate } from "react-router-dom";
 import { images } from "../../../constants";
+import axios from "axios";
 class Login extends Component {
     constructor(props) {
     super(props);
@@ -11,7 +12,9 @@ class Login extends Component {
         loginParams: {
         user_id: "",
         user_password: ""
-        }
+        },
+        token:'',
+        auth:false
     };
     }
     handleFormChange = event => {
@@ -26,8 +29,23 @@ class Login extends Component {
     login = event => {
     let user_id = this.state.loginParams.user_id;
     let user_password = this.state.loginParams.user_password;
-    if (user_id === "admin" && user_password === "123") {
-        localStorage.setItem("token", 'hello');
+    axios.post('http://localhost:4000/login', {
+        user:user_id,password:user_password
+    })
+    .then(res => {
+      console.log('Axios response: ', res)
+      if(res.data.auth==='true'){
+        this.setState({
+            token: res.data.token
+            });
+        this.setState({
+            auth: true
+            });
+      }
+    })
+    if (this.state.auth===true) {
+        console.log('auth true')
+        localStorage.setItem("token", this.state.token);
         this.setState({
         islogged: true
         });
