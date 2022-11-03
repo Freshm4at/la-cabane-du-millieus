@@ -30,8 +30,10 @@ import de from '../assets/de.png'
 import fr_grey from '../assets/fr_grey.png'
 import en_grey from '../assets/en_grey.png'
 import de_grey from '../assets/de_grey.png'
+import oyster from '../assets/oyster.png'
 
 const images =  {
+  oyster,
   fr_grey,
   en_grey,
   de_grey,

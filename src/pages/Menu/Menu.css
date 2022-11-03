@@ -1,10 +1,11 @@
 .app__menu-meal{
-    background: var(--color-prussian-blue);
+    background: var(--color-crimson);
 }
 
 .app__menu_header-img{
     height: 100%;
     position: relative;
+    background: var(--color-prussian-blue);
 }
 .app__menu_header-img img {
     width: 100%;
@@ -28,6 +29,7 @@
 }
 .app__menu-drink_header img{
     height: 200px;
+    width: auto;
     margin-left: auto;
     margin-right: auto;
 }
@@ -35,6 +37,46 @@
     margin-bottom: 2rem;
 }
 
+.app__menu-nav{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--color-prussian-blue);
+    z-index: 999;
+    position: sticky;
+    top: 100px;
+}
+.app__menu-nav-links {
+    width: fit-content;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 0;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    list-style: none;
+}
+.app__menu-nav-links li {
+    position: relative;
+    margin: 0 2rem;
+    cursor: pointer;
+    font-size: 20px;
+    transition: color 1s;
+    overflow: hidden;
+    background: linear-gradient(to right, var(--color-golden), var(--color-golden) 50%, var(--color-crimson) 50%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 200% 100%;
+    background-position: 100%;
+    transition: background-position 275ms ease;
+}
+.app__menu-nav-links li:hover{
+    background-position: 0 100%;
+    color: var(--color-gold);
+}
 
 @media screen and (max-width: 1000px){
     .app__menu-menu img{
