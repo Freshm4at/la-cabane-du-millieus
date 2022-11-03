@@ -8,7 +8,7 @@
     text-align: center;
 }
 .app__photos h1{
-    position: absolute;
+  position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -17,4 +17,10 @@
 .app__photos-header img{
     height: 600px;
     width: 100%;
+}
+
+@media screen and (max-width: 1000px) {
+    .app__photos h1{
+        top: 40%
+    }
 }

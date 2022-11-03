@@ -6,6 +6,8 @@ import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
 import LanguageDetector from 'i18next-browser-languagedetector';
 import HttpApi from 'i18next-http-backend';
+import PrivateRoutes from './pages/Admin/Login/PrivateRoute';
+import Login from './pages/Admin/Login/login';
 
 const Home = lazy(()=> import('./pages/Home/Home'))
 const Menu = lazy(()=> import('./pages/Menu/Menu'))
@@ -34,7 +36,8 @@ i18n
     }
   });
 
-const App = () => (
+const App = () => {
+  return(
   <div className='app__main'>
     <Router>
     <ScrollToTop />
@@ -47,12 +50,15 @@ const App = () => (
           <Route exact path='/menu' element={<Menu />}></Route>
           <Route exact path='/photos' element={<Photos />}></Route>
           <Route exact path='/contact' element={<Contact />}></Route>
-          <Route exact path='/admin' element={<Admin />}></Route>
+          <Route exact path='/login' element={<Login />}></Route>
+          <Route element={<PrivateRoutes />}>
+            <Route exact path='/admin' element={<Admin />}></Route>
+          </Route>
       </Routes>
     </Suspense>
     <Footer/>
     </Router>
   </div>
-);
+)};
 
 export default App;

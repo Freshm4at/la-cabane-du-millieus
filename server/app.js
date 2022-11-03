@@ -58,8 +58,15 @@ app.post('/txt-upload-de', txtDEUpload.array('my-image-file'), (req, res) => {
   console.log('Axios POST body: ', req.body);
   res.send('POST request recieved on server to /txt-upload-de.');
 })
+app.post('/login',(req,res) =>{
+  console.log('POST request received to /login');
+  if(req.body.user === 'auriel' && req.body.password==='test'){
+    console.log('auth succes');
+    res.send({'token':'McQfTjWnZr4t7w!z%C*F-JaNdRgUkXp2'});
+  } 
+})
 
-const port = 4000;
+const port = 4000
 app.listen(port, process.env.IP, function(){
   console.log(`Server is running on port ${port}`);
 });

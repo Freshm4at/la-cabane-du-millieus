@@ -1,0 +1,17 @@
+/* style the container */
+.app__login {
+  position: relative;
+  border-radius: 5px;
+  background-color: var(--color-crimson);
+  padding: 20px 0 30px 0;
+}
+.app__login-form{
+    padding: 1rem;
+    align-items: center;
+    justify-content: space-between;
+}
+.app__login-form input{
+    padding: 10px;
+    margin-bottom: 1rem;
+    color: black;
+}
