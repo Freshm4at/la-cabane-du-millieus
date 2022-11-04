@@ -38,7 +38,6 @@
 }
 
 .app__menu-nav{
-    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -48,19 +47,18 @@
     top: 100px;
 }
 .app__menu-nav-links {
-    width: fit-content;
     flex: 1;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 0;
     padding-top: 1rem;
+    text-align: center;
     padding-bottom: 1rem;
     list-style: none;
 }
 .app__menu-nav-links li {
-    position: relative;
-    margin: 0 2rem;
+    margin: 0 1rem;
     cursor: pointer;
     font-size: 20px;
     transition: color 1s;
@@ -76,6 +74,9 @@
 .app__menu-nav-links li:hover{
     background-position: 0 100%;
     color: var(--color-gold);
+}
+.app__menu-nav-links_li{
+    height: 100%;
 }
 
 @media screen and (max-width: 1000px){
