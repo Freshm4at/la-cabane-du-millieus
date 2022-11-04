@@ -1,18 +1,12 @@
 import React from 'react';
-import {meal} from '../../../constants'
+import { images } from '../../../constants';
 import './Intro.css';
 
 const Intro = () => {
   const vidRef = React.useRef();
   return(
   <div className='app__video' id='home'>
-    <video src={meal}
-    ref={vidRef}
-    type='video/mp4'
-    loop
-    controls={false}
-    autoPlay
-    muted/>
+    <img src={images.sea_black}></img>
   </div>
   )
 };

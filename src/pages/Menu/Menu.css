@@ -44,7 +44,7 @@
     background: var(--color-prussian-blue);
     z-index: 999;
     position: sticky;
-    top: 100px;
+    top: 80px;
 }
 .app__menu-nav-links {
     flex: 1;
@@ -59,6 +59,7 @@
 }
 .app__menu-nav-links li {
     margin: 0 1rem;
+    width: 200px;
     cursor: pointer;
     font-size: 20px;
     transition: color 1s;
