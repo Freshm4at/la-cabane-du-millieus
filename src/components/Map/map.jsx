@@ -3,7 +3,7 @@ import GoogleMapReact from 'google-map-react';
 import './map.css'
 
 
-export default function map(){
+export default function Map(){
   const defaultProps = {
     center: {
       lat: 45.7793031477015,
@@ -19,14 +19,13 @@ export default function map(){
     });
     return marker;
    };
-
   return (
     
     // Important! Always set the container height explicitly
     <div classname="google_map" style={{ height: '100vh', width: '100%' }}>
       
       <GoogleMapReact
-        bootstrapURLKeys={{ key: "AIzaSyAoTD5Hj-miYL4GiqKx_j9viTeL-akUVBM" }}
+        bootstrapURLKeys={{ key: process.env.REACT_APP_GOOGLE_API_KEY }}
         defaultCenter={defaultProps.center}
         defaultZoom={defaultProps.zoom}
         onGoogleApiLoaded={({ map, maps }) => renderMarkers(map, maps)}>

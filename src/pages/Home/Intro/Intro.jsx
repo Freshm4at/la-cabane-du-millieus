@@ -3,10 +3,9 @@ import { images } from '../../../constants';
 import './Intro.css';
 
 const Intro = () => {
-  const vidRef = React.useRef();
   return(
   <div className='app__video' id='home'>
-    <img src={images.sea_black}></img>
+    <img src={images.sea_black} alt='black_sea_img'></img>
   </div>
   )
 };

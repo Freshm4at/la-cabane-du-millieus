@@ -52,7 +52,7 @@ const App = () => {
           <Route exact path='/contact' element={<Contact />}></Route>
           <Route exact path='/login' element={<Login />}></Route>
           <Route element={<PrivateRoutes />}>
-            <Route exact path='/admin' element={<Admin />}></Route>
+            <Route exact path='/YWRtaW4gcGFuZWwgZm9yIHN1cGVyIGRldiBsb2wuIFBTOmpzIHN1Y2tz' element={<Admin />}></Route>
           </Route>
       </Routes>
     </Suspense>

@@ -27,9 +27,10 @@ class Login extends Component {
     };
     
     login = event => {
+    const Base_URL = process.env.REACT_APP_ROUTE
     let user_id = this.state.loginParams.user_id;
     let user_password = this.state.loginParams.user_password;
-    axios.post('http://localhost:4000/login', {
+    axios.post(`${Base_URL}/login`, {
         user:user_id,password:user_password
     })
     .then(res => {
@@ -54,7 +55,7 @@ class Login extends Component {
     };
     render() {
     if (this.state.islogged===true) {
-        return <Navigate to="/admin" />;
+        return <Navigate to="/YWRtaW4gcGFuZWwgZm9yIHN1cGVyIGRldiBsb2wuIFBTOmpzIHN1Y2tz" />;
     }
     return (
         <div className="app__login">

@@ -16,24 +16,19 @@ const Admin = () => {
   const [img,setImg] = useState(null)
   const [lang, setLang] = useState(null);
   const [txt,setTxt] = useState(null)
+  const Base_URL = process.env.REACT_APP_ROUTE
 
-  const header = {
-    headers: {
-      'content-type': 'multipart/form-data',
-      'token':localStorage.getItem("token") 
-    },
-  };
   const handleChange = (event) => {
     setLang(event.target.value);
   };
   const handleClickTxt = () =>{
-    axios.post(`http://localhost:4000/auth`, {
+    axios.post(`${Base_URL}/auth`, {
       auth:localStorage.getItem("token") 
     })
     .then(res => {
       if(res.data.auth==='true'){
         console.log('ok')
-        axios.post(`http://localhost:4000/txt-upload-${lang}`, txt)
+        axios.post(`${Base_URL}/txt-upload-${lang}`, txt)
         .then(res => {
           console.log('Axios response: ', res)
         })
@@ -43,13 +38,13 @@ const Admin = () => {
   }
 
   const HandleClickImg = () => {
-    axios.post(`http://localhost:4000/auth`, {
+    axios.post(`${Base_URL}/auth`, {
       auth:localStorage.getItem("token") 
     })
     .then(res => {
       if(res.data.auth==='true'){
         console.log('ok')
-        axios.post(`http://localhost:4000/image-upload`, image)
+        axios.post(`${Base_URL}/image-upload`, image)
         .then(res => {
           console.log('Axios response: ', res)
         })
