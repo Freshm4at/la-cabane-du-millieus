@@ -29,9 +29,9 @@ const Admin = () => {
       if(res.data.auth==='true'){
         console.log('ok')
         axios.post(`${Base_URL}/txt-upload-${lang}`, txt)
-        .then(res => {
-          console.log('Axios response: ', res)
-        })
+        alert(`Upload des textes ${lang} réussi!`)
+        setTxt(null)
+        setLang(null)
       }
     })
     
@@ -43,11 +43,10 @@ const Admin = () => {
     })
     .then(res => {
       if(res.data.auth==='true'){
-        console.log('ok')
         axios.post(`${Base_URL}/image-upload`, image)
-        .then(res => {
-          console.log('Axios response: ', res)
-        })
+        alert(`Upload de l'image réussi!`)
+        setImg(null)
+        setImage(null);
       }
     })
   }
@@ -83,9 +82,9 @@ const Admin = () => {
                 value={lang}
                 label="langue"
                 onChange={handleChange}>
-                <MenuItem value='fr'>FR</MenuItem>
-                <MenuItem value='en'>EN</MenuItem>
-                <MenuItem value='de'>DE</MenuItem>
+                <MenuItem value='fr'><p style={{color:'black'}}>FR</p></MenuItem>
+                <MenuItem value='en'><p style={{color:'black'}}>EN</p></MenuItem>
+                <MenuItem value='de'><p style={{color:'black'}}>DE</p></MenuItem>
               </Select>
             </FormControl>
             </Box>
