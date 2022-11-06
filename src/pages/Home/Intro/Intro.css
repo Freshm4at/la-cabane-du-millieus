@@ -9,7 +9,7 @@
 }
 
 @media screen and (max-width: 1000px){
-    .app__video video{
-        height: 300px;
+    .app__video img{
+        height: 180px;
     }
 }

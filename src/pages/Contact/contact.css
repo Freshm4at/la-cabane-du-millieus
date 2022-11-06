@@ -31,10 +31,14 @@
 
 @media screen and (max-width: 900px){
     .app__contact img{
-        height: 300px;
+        height: 180px;
         width: 100%;
     }
     .app__contact-h1{
-        font-size: 70px;
+        font-size: 56px;
+        line-height: 80px;
+    }
+    .app_contact-content{
+        padding-top: 1rem;
     }
 }

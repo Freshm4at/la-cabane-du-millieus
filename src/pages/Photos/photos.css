@@ -9,6 +9,7 @@
 }
 .app__photos h1{
   position: absolute;
+  width: 100%;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -23,4 +24,13 @@
     .app__photos h1{
         top: 40%
     }
+    .app__photos-header img{
+        height: 200px;
+    }
+    .app__photos h1{
+        top: 20%;
+        left: 50%;
+
+        font-size: 40px;
+      }
 }

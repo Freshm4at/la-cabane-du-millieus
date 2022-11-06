@@ -5,7 +5,7 @@ import { SubHeading } from '../../../components';
 import { images } from '../../../constants';
 import './Restaurant.css'
 import { useTranslation } from 'react-i18next';
-const meteoUrl = "https://api.openweathermap.org/data/2.5/weather?lat=45.7793031477015&lon=-1.1248771891007585&appid=5b09b57f4989e1240c29d992c71ad242"
+const meteoUrl = process.env.REACT_APP_METEO
 
 
 const Restaurant = () => {
