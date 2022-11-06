@@ -8,7 +8,12 @@ import gallery02 from '../assets/gallery02.png';
 import gallery03 from '../assets/gallery03.png';
 import gallery04 from '../assets/gallery04.png';
 import menuHeader from '../assets/menuHeader.jpg';
-import menuMap from '../assets/menu_paper.jpg'
+import menu_paper_carte_fr from '../assets/menu_paper_carte_fr.jpg'
+import menu_paper_carte_en from '../assets/menu_paper_carte_en.jpg'
+import menu_paper_menu_fr from '../assets/menu_paper_menu_fr.jpg'
+import menu_paper_menu_en from '../assets/menu_paper_menu_en.jpg'
+import menu_paper_vin_fr from '../assets/menu_paper_vin_fr.jpg'
+import menu_paper_vin_en from '../assets/menu_paper_vin_en.jpg'
 import sea from '../assets/sea.png'
 import fish from '../assets/fish-drawing.png'
 import menuButton from '../assets/buttonMenu.png'
@@ -33,6 +38,7 @@ import de_grey from '../assets/de_grey.png'
 import oyster from '../assets/oyster.png'
 import sea_black from '../assets/sea_black.jpg'
 
+
 const images =  {
   sea_black,
   oyster,
@@ -49,7 +55,12 @@ const images =  {
   welcome,
   findus,
   menuHeader,
-  menuMap,
+  menu_paper_carte_fr,
+  menu_paper_carte_en,
+  menu_paper_menu_fr,
+  menu_paper_menu_en,
+  menu_paper_vin_fr,
+  menu_paper_vin_en,
   sea,
   fish,
   menuButton,

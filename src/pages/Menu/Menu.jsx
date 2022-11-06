@@ -24,7 +24,7 @@ const Menu = () => {
           <p className='p__opensans' style={{color:'#0C0C0C'}}>{t('Menu_sous_titre')}</p>
         </div>
         <div className='app__menu-menu'>
-            <img src={images.menuMap} alt='menu' id='menu_img'/>
+            <img src={images.menu_paper_carte_fr} alt='menu' id='menu_img'/>
         </div>
       </div>
       <div className='app__menu-drink' id='menu'>
@@ -36,7 +36,7 @@ const Menu = () => {
           <p className='p__opensans' style={{color:'#0C0C0C'}}>{t('Menu_sous_titre2')}</p>
         </div>
         <div className='app__menu-menu'>
-          <img src={images.menuMap} alt='menu'></img>
+          <img src={images.menu_paper_carte_fr} alt='menu'></img>
         </div>
       </div>
       <div className='app__menu-drink' id='boisson'>
@@ -47,7 +47,7 @@ const Menu = () => {
           <h1 className='headtext__cormorant' style={{color:'#0C0C0C'}}>{t('Menu_titre_3')}</h1>
         </div>
         <div className='app__menu-menu'>
-          <img src={images.menuMap} alt='menu'></img>
+          <img src={images.menu_paper_carte_fr} alt='menu'></img>
         </div>
       </div>
     </div>
