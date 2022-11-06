@@ -90,6 +90,10 @@
         height: 500px;
         object-fit: cover;
     }
+    .app__menu-nav-links li {
+        width: 80px;
+        
+    }
 }
 @media screen and (max-width: 650px){
     .app__menu_header-img img {
