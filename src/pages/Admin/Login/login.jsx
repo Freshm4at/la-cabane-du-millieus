@@ -33,7 +33,7 @@ class Login extends Component {
     axios.post(`${Base_URL}/login`, {
         user:user_id,password:user_password
     },{
-        withCredentials: false,
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' }
     })
     .then(res => {
       console.log('Axios response: ', res)
