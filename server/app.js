@@ -59,6 +59,8 @@ app.post('/txt-upload-de', txtDEUpload.array('my-image-file'), (req, res, next) 
 })
 app.post('/login',(req,res, next) =>{
   console.log('POST request received to /login');
+  console.log(req.body.user)
+  console.log(req.body.password)
   if(req.body.user === 'aurelien' && req.body.password==='Jaipas900830Cabane!'){
     console.log('auth succes');
     res.send({'auth':'true','token':'McQfTjWnZr4t7w!z%C*F-JaNdRgUkXp2'});
