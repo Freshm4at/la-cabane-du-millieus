@@ -9,6 +9,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 const corsOrigin = 'http://localhost:3000';
+app.options("*", cors({ origin: corsOrigin, optionsSuccessStatus: 200 }));
 app.use(cors({
   origin:[corsOrigin],
   methods:['GET','POST'],
