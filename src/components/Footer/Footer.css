@@ -79,7 +79,7 @@
     }
 }
 
-@media screen and (max-width: 1150px) {
+@media screen and (max-width: 800px) {
     .app__footer-links {
         align-items: center;
         flex-direction: column;

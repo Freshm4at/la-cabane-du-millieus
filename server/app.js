@@ -8,9 +8,7 @@ const path = require('path')
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-const corsOrigin = 'http://localhost:3000';
 app.use(cors({
-  origin:[corsOrigin],
   methods:['GET','POST'],
   credentials: true 
 })); 
