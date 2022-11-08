@@ -13,7 +13,6 @@ app.options("*", cors({ origin: corsOrigin, optionsSuccessStatus: 200 }));
 app.use(cors({
   origin:[corsOrigin],
   methods:['GET','POST'],
-  credentials: false 
 })); 
 dirname = path.join(process.cwd(),'../')
 console.log(dirname)
