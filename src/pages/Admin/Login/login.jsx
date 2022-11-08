@@ -30,9 +30,11 @@ class Login extends Component {
     const Base_URL = process.env.REACT_APP_ROUTE
     let user_id = this.state.loginParams.user_id;
     let user_password = this.state.loginParams.user_password;
+    const header = {'Access-Control-Allow-Origin': '*',
+    'Content-Type': 'application/json'}
     axios.post(`${Base_URL}/login`, {
         user:user_id,password:user_password
-    })
+    },{header})
     .then(res => {
       console.log('Axios response: ', res)
       if(res.data.auth==='true'){
