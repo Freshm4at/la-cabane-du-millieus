@@ -91,6 +91,6 @@ app.post('/auth',(req,res, next) =>{
 })
 
 const port = 4000
-app.listen(port, process.env.IP, function(){
+app.listen(port, function(){
   console.log(`Server is running on port ${port}`);
 });
