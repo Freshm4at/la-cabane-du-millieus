@@ -21,7 +21,10 @@ const Restaurant = () => {
   if (!post){
     temp = "NA"
     weatherImg = images.sun
-  }else{
+  }else if (Math.floor(Date.now() / 1000) >= post.sys.sunset){
+    weatherImg = images.night
+    temp = Math.round(post.main.temp-273.15)
+  }else {
     temp = Math.round(post.main.temp-273.15)
     switch(post.weather[0].main){
       case 'Thunderstorm':

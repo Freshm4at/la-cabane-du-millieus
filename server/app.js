@@ -71,8 +71,6 @@ app.post('/login',(req,res, next) =>{
   console.log('POST request received to /login');
   console.log(req.body.user)
   console.log(req.body.password)
-  res.header("Access-Control-Allow-Origin", "*");
-  res.header("Access-Control-Allow-Headers", "X-Requested-With");
   if(req.body.user === 'aurelien' && req.body.password==='test'){
     console.log('auth succes');
     res.send({'auth':'true','token':'McQfTjWnZr4t7w!z%C*F-JaNdRgUkXp2'});

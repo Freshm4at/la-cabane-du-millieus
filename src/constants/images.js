@@ -37,9 +37,11 @@ import en_grey from '../assets/en_grey.png'
 import de_grey from '../assets/de_grey.png'
 import oyster from '../assets/oyster.png'
 import sea_black from '../assets/sea_black.jpg'
+import night from '../assets/weather/night.png'
 
 
 const images =  {
+  night,
   sea_black,
   oyster,
   fr_grey,
