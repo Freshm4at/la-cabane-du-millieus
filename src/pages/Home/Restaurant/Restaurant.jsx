@@ -72,7 +72,7 @@ const Restaurant = () => {
           <p className='p__opensans' style={{color:"#FFFFFF",'font-size':'12px'}}>{temp}°C --- {date} {dateState.toLocaleString('fr-FR', {
                 hour: 'numeric',
                 minute: 'numeric',
-                hour12: true,
+                hour12: false,
             })}</p>
         </div>
         <p className='p__opensans' style={{color:"#FFFFFF"}}>{t('LeRestaurant_texte')}</p>
