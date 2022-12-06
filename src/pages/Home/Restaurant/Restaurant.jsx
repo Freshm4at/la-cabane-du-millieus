@@ -46,7 +46,11 @@ const Restaurant = () => {
         weatherImg = images.sun
         break;
       case 'Clouds':
-        weatherImg = images.cloudy_day
+        if(post.weather[0].description === 'few clouds'){
+          weatherImg = images.cloudy_day
+        }else{
+          weatherImg = images.cloud
+        }
         break;
       default:
         weatherImg = images.sun
