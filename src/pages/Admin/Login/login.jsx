@@ -43,7 +43,13 @@ class Login extends Component {
             auth: true
             });
       }
+      else{
+        alert("Identifiant/Mot de passe incorrect")
+      }
     })
+    .catch(error => {
+        alert("Erreur. Problème de connexion")
+      });
     if (this.state.auth===true) {
         console.log('auth true')
         localStorage.setItem("token", this.state.token);
