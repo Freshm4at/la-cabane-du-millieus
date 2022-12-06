@@ -26,6 +26,7 @@ const Restaurant = () => {
     temp = Math.round(post.main.temp-273.15)
   }else {
     temp = Math.round(post.main.temp-273.15)
+
     switch(post.weather[0].main){
       case 'Thunderstorm':
         weatherImg = images.storm
@@ -54,7 +55,6 @@ const Restaurant = () => {
         break;
       default:
         weatherImg = images.sun
-
     }
   }
 
