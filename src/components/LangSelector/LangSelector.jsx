@@ -16,7 +16,8 @@ const LangSelector = () => {
 
   
   const handleClick = (e) => {
-    console.log('click')
+    document.body.scrollTop = 0; // For Safari
+    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
     switch(e.target.getAttribute('alt')){
       case 'img_fr':
         console.log('click')
