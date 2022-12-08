@@ -66,7 +66,7 @@ const Admin = () => {
         <h1 className='headtext__cormorant' style={{'text-align':'center',padding:'1rem'}}>Admin Panel</h1>
         <div className='app__admin-upload flex__center'>
           <p className='p__opensans' style={{"font-size":'50px',"padding-bottom":'2rem'}}>Changer une image</p>
-          <input className='input' type="file" onChange={getFileInfo}></input>
+          <input className='input' type="file" onChange={getFileInfo} accept=".jpg"></input>
           <img src={img} alt='upload_img'/>
           <button type='button' className='custom__button' onClick={HandleClickImg}><p className='custom__button-text'>Upload</p></button>
         </div>
@@ -90,7 +90,7 @@ const Admin = () => {
             </Box>
           </div>
           <input className='input' type="file" onChange={getFileInfo}></input>
-          <button type='button' className='custom__button' onClick={handleClickTxt}><p className='custom__button-text'>Upload</p></button>
+          <button type='button' className='custom__button' onClick={handleClickTxt} accept=".json"><p className='custom__button-text'>Upload</p></button>
         </div>
     </div>
   )
