@@ -103,8 +103,8 @@ const Admin = () => {
             </FormControl>
             </Box>
           </div>
-          <input className='input' type="file" onChange={getFileInfo}></input>
-          <button type='button' className='custom__button' onClick={handleClickTxt} accept=".json"><p className='custom__button-text'>Upload</p></button>
+          <input className='input' type="file" onChange={getFileInfo} accept=".json"></input>
+          <button type='button' className='custom__button' onClick={handleClickTxt}><p className='custom__button-text'>Upload</p></button>
         </div>
     </div>
   )
