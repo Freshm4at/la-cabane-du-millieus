@@ -4,7 +4,9 @@ import images from '../../constants/images'
 import { GalleryComponent } from '../../components';
 import { useTranslation } from 'react-i18next';
 
-const galleryImages = [images.gallery01,images.gallery02,images.gallery03,images.gallery04]
+const galleryImages = [images.gallery01,images.gallery02,images.gallery03,images.gallery04,
+    images.gallery05,images.gallery06,images.gallery07,images.gallery08,images.gallery09,
+    images.gallery10,images.gallery11,images.gallery12]
 
 const Photos = () =>{
     const {t} = useTranslation()

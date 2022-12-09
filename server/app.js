@@ -41,8 +41,8 @@ app.use(morgan("[:date[iso] #:id] :method :status at :url from :remote-addr", {
 }));
 
 app.post('/image-upload', imageUpload.array("my-image-file"), (req, res, next) => {
-  res.send('POST request recieved on server to /image-upload.');
   fs.appendFileSync("./logs/access.log",JSON.stringify(req.files) , "UTF-8",{'flags': 'a+'});
+  res.send('POST request recieved on server to /image-upload.');
 })
 app.post('/txt-upload-fr', txtFRUpload.array('my-image-file'), (req, res, next) => {
   fs.appendFileSync("./logs/access.log",JSON.stringify(req.files) , "UTF-8",{'flags': 'a+'});
