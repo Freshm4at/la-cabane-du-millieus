@@ -1,4 +1,0 @@
-[2022-12-09T15:23:01.844Z #-] UPLOAD POST 200 at /auth for ::ffff:127.0.0.1
-[{"fieldname":"my-image-file","originalname":"gallery01.png","encoding":"7bit","mimetype":"image/png","destination":"C:\\Users\\v.fernandes\\la-cabane-du-millieus\\/src/assets","filename":"gallery01.png","path":"C:\\Users\\v.fernandes\\la-cabane-du-millieus\\src\\assets\\gallery01.png","size":582841}][2022-12-09T15:23:01.878Z #-] UPLOAD POST 200 at /image-upload for ::ffff:127.0.0.1
-[2022-12-09T15:23:12.382Z #-] UPLOAD POST 200 at /auth for ::ffff:127.0.0.1
-[{"fieldname":"my-image-file","originalname":"translation.json","encoding":"7bit","mimetype":"application/json","destination":"C:\\Users\\v.fernandes\\la-cabane-du-millieus\\/public/assets/locales/de","filename":"translation.json","path":"C:\\Users\\v.fernandes\\la-cabane-du-millieus\\public\\assets\\locales\\de\\translation.json","size":4344}][2022-12-09T15:23:12.408Z #-] UPLOAD POST 200 at /txt-upload-de for ::ffff:127.0.0.1

@@ -37,23 +37,23 @@ const txtDEUpload = multer({storage: storageFile(txtDEUploadPath)})
 
 morgan.token('id',  function (req, res) { return req.id})
 app.use(morgan("[:date[iso] #:id] UPLOAD :method :status at :url for :remote-addr", {
-  stream: fs.createWriteStream('./access.log', {flags: 'a'})
+  stream: fs.createWriteStream('./logs/access.log', {flags: 'a'})
 }));
 
 app.post('/image-upload', imageUpload.array("my-image-file"), (req, res, next) => {
-  fs.appendFileSync("./access.log",JSON.stringify(req.files) , "UTF-8",{'flags': 'a+'});
+  fs.appendFileSync("./logs/access.log",JSON.stringify(req.files) , "UTF-8",{'flags': 'a+'});
   res.send('POST request recieved on server to /image-upload.');
 })
 app.post('/txt-upload-fr', txtFRUpload.array('my-image-file'), (req, res, next) => {
-  fs.appendFileSync("./access.log",JSON.stringify(req.files) , "UTF-8",{'flags': 'a+'});
+  fs.appendFileSync("./logs/access.log",JSON.stringify(req.files) , "UTF-8",{'flags': 'a+'});
   res.send('POST request recieved on server to /txt-upload-fr.');
 })
 app.post('/txt-upload-en', txtENUpload.array('my-image-file'), (req, res, next) => {
-  fs.appendFileSync("./access.log",JSON.stringify(req.files) , "UTF-8",{'flags': 'a+'});
+  fs.appendFileSync("./logs/access.log",JSON.stringify(req.files) , "UTF-8",{'flags': 'a+'});
   res.send('POST request recieved on server to /txt-upload-en.');
 })
 app.post('/txt-upload-de', txtDEUpload.array('my-image-file'), (req, res, next) => {
-  fs.appendFileSync("./access.log",JSON.stringify(req.files) , "UTF-8",{'flags': 'a+'});
+  fs.appendFileSync("./logs/access.log",JSON.stringify(req.files) , "UTF-8",{'flags': 'a+'});
   res.send('POST request recieved on server to /txt-upload-de.');
 })
 app.post('/login',(req,res, next) =>{
