@@ -1,5 +1,6 @@
 
 import React, { Component } from "react";
+import CryptoJS from "crypto-js";
 import "./login.css";
 import { Navigate } from "react-router-dom";
 import { images } from "../../../constants";
@@ -28,8 +29,8 @@ class Login extends Component {
     
     login = event => {
     const Base_URL = process.env.REACT_APP_ROUTE
-    let user_id = this.state.loginParams.user_id;
-    let user_password = this.state.loginParams.user_password;
+    let user_id = CryptoJS.AES.encrypt(this.state.loginParams.user_id.toLowerCase(),process.env.REACT_APP_PASS).toString();
+    let user_password =CryptoJS.AES.encrypt(this.state.loginParams.user_password,process.env.REACT_APP_PASS).toString();
     axios.post(`${Base_URL}/login`, {
         user:user_id,password:user_password
     })

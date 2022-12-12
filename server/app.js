@@ -6,7 +6,8 @@ const morgan = require('morgan');
 const fs = require('fs');
 const bodyParser = require('body-parser');
 const path = require('path');
-const { timeStamp, timeLog } = require('console');
+const crypto = require('crypto-js');
+require('dotenv').config()
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
@@ -63,7 +64,15 @@ app.post('/txt-upload-de', txtDEUpload.array('my-image-file'), (req, res, next) 
   res.send('POST request recieved on server to /txt-upload-de.');
 })
 app.post('/login',(req,res, next) =>{
-  if(req.body.user === 'aurelien' && req.body.password==='test'){
+  const user = crypto.AES.decrypt(req.body.user,process.env.REACT_APP_PASS).toString(crypto.enc.Utf8)
+  const password = crypto.AES.decrypt(req.body.password,process.env.REACT_APP_PASS).toString(crypto.enc.Utf8)
+
+  console.log(user,crypto.enc.Utf8.stringify(crypto.enc.Base64.parse(process.env.REACT_APP_U)))
+  console.log(password,crypto.enc.Utf8.stringify(crypto.enc.Base64.parse(process.env.REACT_APP_P)))
+
+
+  if(user === crypto.enc.Utf8.stringify(crypto.enc.Base64.parse(process.env.REACT_APP_U)) && 
+  password===crypto.enc.Utf8.stringify(crypto.enc.Base64.parse(process.env.REACT_APP_P))){
     console.log('auth succes');
     res.send({'auth':'true','token':'McQfTjWnZr4t7w!z%C*F-JaNdRgUkXp2'});
   }else{
