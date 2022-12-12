@@ -66,11 +66,6 @@ app.post('/txt-upload-de', txtDEUpload.array('my-image-file'), (req, res, next) 
 app.post('/login',(req,res, next) =>{
   const user = crypto.AES.decrypt(req.body.user,process.env.REACT_APP_PASS).toString(crypto.enc.Utf8)
   const password = crypto.AES.decrypt(req.body.password,process.env.REACT_APP_PASS).toString(crypto.enc.Utf8)
-
-  console.log(user,crypto.enc.Utf8.stringify(crypto.enc.Base64.parse(process.env.REACT_APP_U)))
-  console.log(password,crypto.enc.Utf8.stringify(crypto.enc.Base64.parse(process.env.REACT_APP_P)))
-
-
   if(user === crypto.enc.Utf8.stringify(crypto.enc.Base64.parse(process.env.REACT_APP_U)) && 
   password===crypto.enc.Utf8.stringify(crypto.enc.Base64.parse(process.env.REACT_APP_P))){
     console.log('auth succes');
