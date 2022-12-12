@@ -35,7 +35,6 @@ class Login extends Component {
         user:user_id,password:user_password
     })
     .then(res => {
-      console.log('Axios response: ', res)
       if(res.data.auth==='true'){
         this.setState({
             token: res.data.token
@@ -52,7 +51,6 @@ class Login extends Component {
         alert("Erreur. Problème de connexion")
       });
     if (this.state.auth===true) {
-        console.log('auth true')
         localStorage.setItem("token", this.state.token);
         this.setState({
         islogged: true
@@ -63,32 +61,33 @@ class Login extends Component {
     render() {
     if (this.state.islogged===true) {
         return <Navigate to="/YWRtaW4gcGFuZWwgZm9yIHN1cGVyIGRldiBsb2wuIFBTOmpzIHN1Y2tz" />;
-    }
-    return (
-        <div className="app__login">
-            <img src={images.fishPhoto} alt='img_fish' style={{height:"300px",width:'100%'}}></img>
-            <div className="flex__center">
-            <form onSubmit={this.login} className="form-signin">
-                <h1 className="headtext__cormorant">Connexion</h1>
-                    <div className="app__login-form app__wrapper_info flex__center">
-                        <input
-                        type="text"
-                        name="user_id"
-                        onChange={this.handleFormChange}
-                        placeholder="Utilisateur"
-                        />
-                        <input
-                        type="password"
-                        name="user_password"
-                        onChange={this.handleFormChange}
-                        placeholder="Mot de passe"
-                        />
-                        <input type="submit" value="Login" />
-                    </div>
-            </form>
+    }else{
+        return (
+            <div className="app__login">
+                <img src={images.fishPhoto} alt='img_fish' style={{height:"300px",width:'100%'}}></img>
+                <div className="flex__center">
+                <form onSubmit={this.login} className="form-signin">
+                    <h1 className="headtext__cormorant">Connexion</h1>
+                        <div className="app__login-form app__wrapper_info flex__center">
+                            <input
+                            type="text"
+                            name="user_id"
+                            onChange={this.handleFormChange}
+                            placeholder="Utilisateur"
+                            />
+                            <input
+                            type="password"
+                            name="user_password"
+                            onChange={this.handleFormChange}
+                            placeholder="Mot de passe"
+                            />
+                            <input type="submit" value="Login" />
+                        </div>
+                </form>
+                </div>
             </div>
-        </div>
-    );
+        );
+        }
     }
 }
 export default Login;
