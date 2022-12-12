@@ -1,0 +1,13 @@
+[Unit]
+Description=La-Cabane-Du-Millieus
+
+[Service]
+Type=simple
+Restart=always
+User=nobody
+Group=nobody
+WorkingDirectory=/var/www/La-Cabane-Du-Millieus
+ExecStart=/var/www/La-Cabane-Du-Millieus/Lauch.sh
+
+[Install]
+WantedBy=multi-user.target
