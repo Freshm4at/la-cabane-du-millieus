@@ -4,6 +4,7 @@ export default function importAll(r) {
     r.keys().map((item, index) => { 
       images[item.replace('./', '')] = r(item); 
       size = size +1
+      return ''
     });
     return [images,size];
   }
