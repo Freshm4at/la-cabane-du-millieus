@@ -1,6 +1,5 @@
 import bg from '../assets/bg.png';
 import menu from '../assets/menu.png';
-import overlaybg from '../assets/overlaybg.png';
 import welcome from '../assets/welcome.png';
 import findus from '../assets/findus.png';
 import gallery01 from '../assets/photos/gallery1.png'
@@ -28,13 +27,12 @@ import snow from '../assets/weather/snow.png'
 import storm from '../assets/weather/storm.png'
 import sun from '../assets/weather/sun.png'
 import fisherman from '../assets/fisherman.png'
-import pin from '../assets/location-pin.png'
-import fr from '../assets/fr.png'
-import en from '../assets/en.png'
-import de from '../assets/de.png'
-import fr_grey from '../assets/fr_grey.png'
-import en_grey from '../assets/en_grey.png'
-import de_grey from '../assets/de_grey.png'
+import fr from '../assets/flags/fr.png'
+import en from '../assets/flags/en.png'
+import de from '../assets/flags/de.png'
+import fr_grey from '../assets/flags/fr_grey.png'
+import en_grey from '../assets/flags/en_grey.png'
+import de_grey from '../assets/flags/de_grey.png'
 import oyster from '../assets/oyster.png'
 import sea_black from '../assets/sea_black.jpg'
 import night from '../assets/weather/night.png'
@@ -53,7 +51,6 @@ const images =  {
   gallery03,
   gallery04,
   menu,
-  overlaybg,
   welcome,
   findus,
   menuHeader,
@@ -77,7 +74,6 @@ const images =  {
   storm,
   sun,
   fisherman,
-  pin,
   fr,
   en,
   de,

@@ -43,8 +43,7 @@ const App = () => {
     <ScrollToTop />
     <Navbar/>
     <Suspense fallback={<h1 className='headtext__cormorant' style={
-      {'background-color':'#003067',textAlign:'center',margin:'auto'}
-      }>Chargement...</h1>}>
+      {'background-color':'#003067',textAlign:'center',margin:'auto'}}>Chargement...</h1>}>
       <Routes>
           <Route exact path='/' element={<Home />} />
           <Route exact path='/menu' element={<Menu />}></Route>
