@@ -3,25 +3,17 @@ import menu from '../assets/menu.png';
 import overlaybg from '../assets/overlaybg.png';
 import welcome from '../assets/welcome.png';
 import findus from '../assets/findus.png';
-import gallery01 from '../assets/gallery01.png'
-import gallery02 from '../assets/gallery02.png';
-import gallery03 from '../assets/gallery03.png';
-import gallery04 from '../assets/gallery04.png';
-import gallery05 from '../assets/gallery05.png';
-import gallery06 from '../assets/gallery06.png';
-import gallery07 from '../assets/gallery07.png';
-import gallery08 from '../assets/gallery08.png';
-import gallery09 from '../assets/gallery09.png';
-import gallery10 from '../assets/gallery10.png';
-import gallery11 from '../assets/gallery11.png';
-import gallery12 from '../assets/gallery12.png';
+import gallery01 from '../assets/photos/gallery1.png'
+import gallery02 from '../assets/photos/gallery2.png';
+import gallery03 from '../assets/photos/gallery3.png';
+import gallery04 from '../assets/photos/gallery4.png';
 import menuHeader from '../assets/menuHeader.jpg';
-import menu_paper_carte_fr from '../assets/menu_paper_carte_fr.jpg'
-import menu_paper_carte_en from '../assets/menu_paper_carte_en.jpg'
-import menu_paper_menu_fr from '../assets/menu_paper_menu_fr.jpg'
-import menu_paper_menu_en from '../assets/menu_paper_menu_en.jpg'
-import menu_paper_vin_fr from '../assets/menu_paper_vin_fr.jpg'
-import menu_paper_vin_en from '../assets/menu_paper_vin_en.jpg'
+import menu_paper_carte_fr from '../assets/menu/menu_paper_carte_fr.jpg'
+import menu_paper_carte_en from '../assets/menu/menu_paper_carte_en.jpg'
+import menu_paper_menu_fr from '../assets/menu/menu_paper_menu_fr.jpg'
+import menu_paper_menu_en from '../assets/menu/menu_paper_menu_en.jpg'
+import menu_paper_vin_fr from '../assets/menu/menu_paper_vin_fr.jpg'
+import menu_paper_vin_en from '../assets/menu/menu_paper_vin_en.jpg'
 import sea from '../assets/sea.png'
 import fish from '../assets/fish-drawing.png'
 import menuButton from '../assets/buttonMenu.png'
@@ -60,14 +52,6 @@ const images =  {
   gallery02,
   gallery03,
   gallery04,
-  gallery05,
-  gallery06,
-  gallery07,
-  gallery08,
-  gallery09,
-  gallery10,
-  gallery11,
-  gallery12,
   menu,
   overlaybg,
   welcome,

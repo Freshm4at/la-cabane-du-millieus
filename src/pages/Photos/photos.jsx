@@ -3,10 +3,13 @@ import './photos.css';
 import images from '../../constants/images'
 import { GalleryComponent } from '../../components';
 import { useTranslation } from 'react-i18next';
+import importAll from '../../components/Tools/importAll';
 
-const galleryImages = [images.gallery01,images.gallery02,images.gallery03,images.gallery04,
-    images.gallery05,images.gallery06,images.gallery07,images.gallery08,images.gallery09,
-    images.gallery10,images.gallery11,images.gallery12]
+const ImgFolder = importAll(require.context('../../assets/photos', false, /\.(png|jpe?g|svg)$/));
+var galleryImages = []
+for (let i = 1; i < ImgFolder[1] + 1; i++) {
+galleryImages.push(ImgFolder[0][`gallery${i}.png`]);
+}
 
 const Photos = () =>{
     const {t} = useTranslation()

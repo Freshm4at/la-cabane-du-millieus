@@ -14,7 +14,8 @@ app.use(bodyParser.json());
 app.use(cors()); 
 dirname = path.join(process.cwd(),'../')
 
-const imageUploadPath = dirname + '/src/assets';
+const imageUploadPathMenu = dirname + '/src/assets/menu';
+const imageUploadPathPhotos = dirname + '/src/assets/photos';
 const txtFRUploadPath = dirname + '/public/assets/locales/fr';
 const txtENUploadPath = dirname + '/public/assets/locales/en';
 const txtDEUploadPath = dirname + '/public/assets/locales/de';
@@ -30,7 +31,8 @@ const storageFile = (path) => (
   })
 )
 
-const imageUpload = multer({storage: storageFile(imageUploadPath)})
+const imageUploadMenu = multer({storage: storageFile(imageUploadPathMenu)})
+const imageUploadPhotos = multer({storage: storageFile(imageUploadPathPhotos)})
 const txtFRUpload = multer({storage: storageFile(txtFRUploadPath)})
 const txtENUpload = multer({storage: storageFile(txtENUploadPath)})
 const txtDEUpload = multer({storage: storageFile(txtDEUploadPath)})
@@ -40,7 +42,11 @@ app.use(morgan("[:date[iso] #:id] :method :status at :url from :remote-addr", {
   stream: fs.createWriteStream('./logs/access.log', {flags: 'a'})
 }));
 
-app.post('/image-upload', imageUpload.array("my-image-file"), (req, res, next) => {
+app.post('/image-upload-menu', imageUploadMenu.array("my-image-file"), (req, res, next) => {
+  fs.appendFileSync("./logs/access.log",JSON.stringify(req.files) , "UTF-8",{'flags': 'a+'});
+  res.send('POST request recieved on server to /image-upload.');
+})
+app.post('/image-upload-photos', imageUploadPhotos.array("my-image-file"), (req, res, next) => {
   fs.appendFileSync("./logs/access.log",JSON.stringify(req.files) , "UTF-8",{'flags': 'a+'});
   res.send('POST request recieved on server to /image-upload.');
 })

@@ -3,11 +3,14 @@ import { BsArrowLeftShort,BsArrowRightShort } from 'react-icons/bs';
 
 import './Gallery.css';
 import { SubHeading } from '../../../components';
-import { images } from '../../../constants';
 import { useTranslation } from 'react-i18next';
-const galleryImages = [images.gallery01,images.gallery02,images.gallery03,images.gallery04,
-  images.gallery05,images.gallery06,images.gallery07,images.gallery08,images.gallery09,
-  images.gallery10,images.gallery11,images.gallery12]
+import importAll from '../../../components/Tools/importAll';
+
+const ImgFolder = importAll(require.context('../../../assets/photos', false, /\.(png|jpe?g|svg)$/));
+var galleryImages = []
+for (let i = 1; i < ImgFolder[1] + 1; i++) {
+  galleryImages.push(ImgFolder[0][`gallery${i}.png`]);
+}
 
 const Gallery = () => {
   const scrollRef = React.useRef(null)
