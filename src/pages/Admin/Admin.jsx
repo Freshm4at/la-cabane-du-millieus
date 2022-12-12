@@ -31,12 +31,17 @@ const Admin = () => {
       auth:localStorage.getItem("token") 
     })
     .then(res => {
-      if(res.data.auth==='true'){
-        console.log('ok')
-        axios.post(`${Base_URL}/txt-upload-${lang}`, txt)
-        alert(`Upload des textes ${lang} réussi!`)
-        setTxt(null)
-        setLang(null)
+      if(lang!=null){
+        if(res.data.auth==='true' && txt!=null ){
+          axios.post(`${Base_URL}/txt-upload-${lang}`, txt)
+          alert(`Upload des textes ${lang} réussi!`)
+          setTxt(null)
+          setLang(null)
+        }else{
+          alert('veuillez charger un fichier.')
+        }
+      }else{
+        alert("Choisissez la langue changer")
       }
     })
     
@@ -47,15 +52,19 @@ const Admin = () => {
       auth:localStorage.getItem("token") 
     })
     .then(res => {
-      if(res.data.auth==='true' && image!=null){
-        axios.post(`${Base_URL}/image-upload-${imgType}`, image)
-        alert(`Upload de l'image réussi!`)
-        setImg(null)
-        setImage(null);
-      }
-      else{
-        alert('veuillez charger un fichier.')
-      }
+      if(imgType!=null){
+        if(res.data.auth==='true' && image!=null){
+          axios.post(`${Base_URL}/image-upload-${imgType}`, image)
+          alert(`Upload de l'image réussi!`)
+          setImg(null)
+          setImage(null);
+        }
+        else{
+          alert('veuillez charger un fichier.')
+        }
+    }else{
+      alert("Choisissez le type d'image a changer")
+    }
     })
   }
   const getFileInfo = (e) => {
@@ -94,7 +103,7 @@ const Admin = () => {
         <h1 className='headtext__cormorant' style={{'text-align':'center',padding:'1rem'}}>Admin Panel</h1>
         <div className='app__admin-upload flex__center'>
           <p className='p__opensans' style={{"font-size":'50px',"padding-bottom":'2rem'}}>Changer une image</p>
-          <Box sx={{ minWidth: 80 }}>
+          <Box sx={{ minWidth: 100 }}>
               <FormControl fullWidth>
               <InputLabel id="demo-simple-select-label">Image</InputLabel>
                 <Select
@@ -108,6 +117,7 @@ const Admin = () => {
                 </Select>
               </FormControl>
               </Box>
+              <p className='p__opensans' style={{"font-size":"12px",color:'#808080'}}>photos = gallery/page d'acceuil. menu = image du menu</p>
           <input className='input' type="file" onChange={getFileInfo} accept=".jpg,.png"></input>
           <img src={img} alt='upload_img'/>
           <button type='button' className='custom__button' onClick={HandleClickImg}><p className='custom__button-text'>Upload</p></button>
@@ -115,7 +125,7 @@ const Admin = () => {
         <div className='app__admin-upload flex__center'>
           <p className='p__opensans' style={{"font-size":'50px',"padding-bottom":'2rem'}}>Changer les textes</p>
           <div className='app__admin-upload-checkbox flex__center'>
-          <Box sx={{ minWidth: 80 }}>
+          <Box sx={{ minWidth: 100 }}>
             <FormControl fullWidth>
             <InputLabel id="demo-simple-select-label">Langues</InputLabel>
               <Select
