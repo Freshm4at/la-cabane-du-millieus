@@ -70,7 +70,7 @@ const Restaurant = () => {
       <SubHeading title={t('LeRestaurant_enTete')} color="#FFFFFF"/>
       <h1 className='headtext__cormorant'>{t('LeRestaurant_titre')}</h1>
       <div className='app__wrapper-content'>
-      <p className='p__cormorant' style={{color:"#DCCA87", margin:"1rem 0 0 0"}}>{t('LeRestaurant_adresse')}</p>
+      <p className='p__cormorant' style={{color:"#DCCA87", margin:"1rem 0 1rem 0"}}>{t('LeRestaurant_adresse')}</p>
         <div className='app__restaurant-meteo'>
           <img src={weatherImg} alt="meteo_img"></img>
           <p className='p__opensans' style={{color:"#FFFFFF",'font-size':'12px'}}>{temp}°C --- {date} {dateState.toLocaleString('fr-FR', {
