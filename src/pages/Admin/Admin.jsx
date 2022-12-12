@@ -14,6 +14,7 @@ import Box from '@mui/material/Box';
 const Admin = () => {
   const [image, setImage] = useState(null);
   const [img,setImg] = useState(null)
+  const [imgType,setimgType]= useState(null)
   const [lang, setLang] = useState(null);
   const [txt,setTxt] = useState(null)
   const Base_URL = process.env.REACT_APP_ROUTE
@@ -43,7 +44,7 @@ const Admin = () => {
     })
     .then(res => {
       if(res.data.auth==='true' && image!=null){
-        axios.post(`${Base_URL}/image-upload`, image)
+        axios.post(`${Base_URL}/image-upload-${imgType}`, image)
         alert(`Upload de l'image réussi!`)
         setImg(null)
         setImage(null);
@@ -54,16 +55,11 @@ const Admin = () => {
     })
   }
   const getFileInfo = (e) => {
-      const validFileGallery = ["gallery01.png","gallery02.png","gallery03.png","gallery04.png",
-      "gallery05.png","gallery06.png","gallery07.png","gallery08.png","gallery09.png","gallery10.png",
-      "gallery11.png","gallery12.png"]
       const validFileMenu = ["menu_paper_carte_en.jpg","menu_paper_carte_fr.jpg",
       "menu_paper_menu_en.jpg","menu_paper_menu_fr.jpg","menu_paper_vin_en.jpg","menu_paper_vin_fr.jpg"]
-
       const validFileLang = "translation.json"
-      const validFileImg = [...validFileGallery,...validFileMenu]
 
-      if(validFileImg.includes(e.target.files[0].name) || e.target.files[0].name === validFileLang){
+      if(validFileMenu.includes(e.target.files[0].name) || e.target.files[0].name === validFileLang){
         const formData = new FormData();  
         //FILE INFO NAME WILL BE "my-image-file"
         formData.append('my-image-file', e.target.files[0], e.target.files[0].name);
@@ -79,6 +75,20 @@ const Admin = () => {
         <img src={images.fishPhoto} alt='img_seafish'></img>
         <h1 className='headtext__cormorant' style={{'text-align':'center',padding:'1rem'}}>Admin Panel</h1>
         <div className='app__admin-upload flex__center'>
+          <Box sx={{ minWidth: 80 }}>
+              <FormControl fullWidth>
+              <InputLabel id="demo-simple-select-label">Image</InputLabel>
+                <Select
+                  labelId="demo-simple-select-label"
+                  id="demo-simple-select"
+                  value={imgType}
+                  label="Image"
+                  onChange={handleChange}>
+                  <MenuItem value='photos'><p style={{color:'black'}}>Photos</p></MenuItem>
+                  <MenuItem value='menu'><p style={{color:'black'}}>Menu</p></MenuItem>
+                </Select>
+              </FormControl>
+              </Box>
           <p className='p__opensans' style={{"font-size":'50px',"padding-bottom":'2rem'}}>Changer une image</p>
           <input className='input' type="file" onChange={getFileInfo} accept=".jpg,.png"></input>
           <img src={img} alt='upload_img'/>
