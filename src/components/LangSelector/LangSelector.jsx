@@ -13,6 +13,9 @@ const LangSelector = () => {
   const [image_de, setImage_de] = useState(
     images.de_grey
   );
+  const [image_it, setImage_it] = useState(
+    images.it_grey
+  );
 
   
   const handleClick = (e) => {
@@ -20,7 +23,6 @@ const LangSelector = () => {
     document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
     switch(e.target.getAttribute('alt')){
       case 'img_fr':
-        console.log('click')
         document.querySelector('html').lang = 'fr'
         i18next.changeLanguage('fr')
         setImage_fr(
@@ -31,6 +33,9 @@ const LangSelector = () => {
         );
         setImage_de(
           images.de_grey
+        );
+        setImage_it(
+          images.it_grey
         );
         break
       case 'img_en':
@@ -45,6 +50,9 @@ const LangSelector = () => {
         setImage_de(
           images.de_grey
         );
+        setImage_it(
+          images.it_grey
+        );
         break
       case 'img_de':
         document.querySelector('html').lang = 'de'
@@ -57,6 +65,25 @@ const LangSelector = () => {
         );
         setImage_de(
           images.de
+        );
+        setImage_it(
+          images.it_grey
+        );
+        break
+        case 'img_it':
+        document.querySelector('html').lang = 'it'
+        i18next.changeLanguage('it')
+        setImage_fr(
+          images.fr_grey
+        );
+        setImage_en(
+          images.en_grey
+        );
+        setImage_de(
+          images.de_grey
+        );
+        setImage_it(
+          images.it
         );
         break
         default:
@@ -71,6 +98,9 @@ const LangSelector = () => {
         setImage_de(
           images.de_grey
         );
+        setImage_it(
+          images.it_grey
+        );
           break
     }
   };
@@ -80,8 +110,9 @@ const LangSelector = () => {
       <img src={image_fr} onClick={handleClick} alt='img_fr'></img>
       <img src={image_en} onClick={handleClick} alt='img_en'></img>
       <img src={image_de} onClick={handleClick} alt='img_de'></img>
+      <img src={image_it} onClick={handleClick} alt='img_it'></img>
     </div>
   )
 }
 
-export default LangSelector
+export default LangSelector 

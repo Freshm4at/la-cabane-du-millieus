@@ -36,9 +36,13 @@ import de_grey from '../assets/flags/de_grey.png'
 import oyster from '../assets/oyster.png'
 import sea_black from '../assets/sea_black.jpg'
 import night from '../assets/weather/night.png'
+import it from '../assets/flags/it.png'
+import it_grey from '../assets/flags/it_grey.png'
 
 
 const images =  {
+  it,
+  it_grey,
   night,
   sea_black,
   oyster,
