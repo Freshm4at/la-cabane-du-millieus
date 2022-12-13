@@ -21,88 +21,26 @@ const LangSelector = () => {
   const handleClick = (e) => {
     document.body.scrollTop = 0; // For Safari
     document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-    switch(e.target.getAttribute('alt')){
-      case 'img_fr':
-        document.querySelector('html').lang = 'fr'
-        i18next.changeLanguage('fr')
-        setImage_fr(
-          images.fr
-        );
-        setImage_en(
-          images.en_grey
-        );
-        setImage_de(
-          images.de_grey
-        );
-        setImage_it(
-          images.it_grey
-        );
-        break
-      case 'img_en':
-        document.querySelector('html').lang = 'en'
-        i18next.changeLanguage('en')
-        setImage_fr(
-          images.fr_grey
-        );
-        setImage_en(
-          images.en
-        );
-        setImage_de(
-          images.de_grey
-        );
-        setImage_it(
-          images.it_grey
-        );
-        break
-      case 'img_de':
-        document.querySelector('html').lang = 'de'
-        i18next.changeLanguage('de')
-        setImage_fr(
-          images.fr_grey
-        );
-        setImage_en(
-          images.en_grey
-        );
-        setImage_de(
-          images.de
-        );
-        setImage_it(
-          images.it_grey
-        );
-        break
-        case 'img_it':
-        document.querySelector('html').lang = 'it'
-        i18next.changeLanguage('it')
-        setImage_fr(
-          images.fr_grey
-        );
-        setImage_en(
-          images.en_grey
-        );
-        setImage_de(
-          images.de_grey
-        );
-        setImage_it(
-          images.it
-        );
-        break
-        default:
-          document.querySelector('html').lang = 'fr'
-        i18next.changeLanguage('fr')
-        setImage_fr(
-          images.fr
-        );
-        setImage_en(
-          images.en_grey
-        );
-        setImage_de(
-          images.de_grey
-        );
-        setImage_it(
-          images.it_grey
-        );
-          break
-    }
+    const lang = ['fr','it','en','de']
+    const langImg = [images.fr,images.it,images.en,images.de]
+    const langImg_grey = [images.fr_grey,images.it_grey,images.en_grey,images.de_grey]
+    const langSet = [setImage_fr,setImage_it,setImage_en,setImage_de]
+    lang.map((it,index)=>{
+      const selectedLang = e.target.getAttribute('alt').split('_')
+      if(it===selectedLang[1]){
+        document.querySelector('html').lang = it
+        i18next.changeLanguage(it)
+        langSet[index](
+          langImg[index]
+        )
+      }else{
+        langSet[index](
+          langImg_grey[index]
+        )
+      }
+      return ''
+    })
+
   };
     
   return (
