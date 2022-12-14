@@ -1,6 +1,7 @@
 .app__video{
     width: 100%;
     background-color: var(--color-crimson);
+    margin: -5px;
 }
 
 .app__video img{
