@@ -17,12 +17,23 @@
 }
 
 .app__header_alert{
-    background:#B22222;
-    display:flex
+    background:var(--color-prussian-blue);
+    display:flex;
+    text-align: center;
+    flex-direction: column;
+    text-align:center;
 }
 .app__header_alert h2{
     padding-top: 1rem;
+    color:var(--color-crimson);
+    font-size:30px;
+    width:100%;
+    padding-bottom: 5px;
+}
+.app__header_alert p{
     padding-bottom: 1rem;
+    color:#FBF5F3;
+    font-style:italic;
 }
 
 @media screen and (max-width: 1000px){

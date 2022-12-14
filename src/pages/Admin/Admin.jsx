@@ -10,9 +10,6 @@ import Select from '@mui/material/Select';
 import Box from '@mui/material/Box';
 import importAll from '../../components/Tools/importAll';
 
-
-
-
 const Admin = () => {
   const [image, setImage] = useState(null);
   const [img,setImg] = useState(null)
@@ -20,6 +17,7 @@ const Admin = () => {
   const [lang, setLang] = useState(null);
   const [txt,setTxt] = useState(null)
   const [close,setClose]=useState(null)
+  const [date,setDate]=useState('')
   const Base_URL = process.env.REACT_APP_ROUTE
 
   const handleChangeTxt = (event) => {
@@ -30,6 +28,9 @@ const Admin = () => {
   }
   const handleChangeClose = (event) => {
     setClose(event.target.value);
+  };
+  const handleChangeDate = (event) => {
+    setDate(event.target.value);
   };
   const handleClickTxt = () =>{
     axios.post(`${Base_URL}/auth`, {
@@ -109,7 +110,9 @@ const Admin = () => {
       })
       .then(res => {
         if(close){
-          const body = {close:close}
+          const body = {
+            close:close,
+            date:date}
             axios.post(`${Base_URL}/close`, body)
             alert(`Mise à jour réussi!`)
           }else{
@@ -169,19 +172,25 @@ const Admin = () => {
         </div>
         <div className='app__admin-upload flex__center'>
           <p className='p__opensans' style={{"font-size":'50px',"padding-bottom":'2rem'}}>Fermeture restaurant</p><Box sx={{ minWidth: 100 }}>
-            <FormControl fullWidth>
-            <InputLabel id="demo-simple-select-label">Choix</InputLabel>
-              <Select
-                labelId="demo-simple-select-label"
-                id="demo-simple-select"
-                value={close}
-                label="Close"
-                onChange={handleChangeClose}>
-                <MenuItem value='Oui'><p style={{color:'black'}}>Oui</p></MenuItem>
-                <MenuItem value='Non'><p style={{color:'black'}}>Non</p></MenuItem>
-              </Select>
-            </FormControl>
-            </Box>
+          <FormControl fullWidth>
+          <InputLabel id="demo-simple-select-label">Choix</InputLabel>
+            <Select
+              labelId="demo-simple-select-label"
+              id="demo-simple-select"
+              value={close}
+              label="Close"
+              onChange={handleChangeClose}>
+              <MenuItem value='Oui'><p style={{color:'black'}}>Oui</p></MenuItem>
+              <MenuItem value='Non'><p style={{color:'black'}}>Non</p></MenuItem>
+            </Select>
+          </FormControl>
+          </Box>
+          <input
+            type="text"
+            className='app__admin-date'
+            onChange={handleChangeDate}
+            placeholder='Date de réouverture'
+          />
           <button type='button' className='custom__button' onClick={HandleClickClose} style={{marginTop:'1rem'}}><p className='custom__button-text'>Mettre à jour</p></button>
         </div>
     </div>

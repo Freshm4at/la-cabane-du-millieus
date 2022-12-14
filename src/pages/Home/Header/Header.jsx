@@ -13,8 +13,8 @@ const Header = () => {
   var displayAlert =  <div className='app__header_alert' style={{display:'none'}}></div>
   if(statut.close==='Oui'){
     displayAlert = <div className='app__header_alert' style={{display:'flex'}}>
-      <h2 className='p__opensans' style={{'text-align':'center',color:'#FFFFFF','font-size':"30px",
-      width:'100%'}}>Actuellement fermé</h2>
+      <h2 className='p__opensans'>{t('Intro_alert1')}</h2>
+      <p className='p__opensans'>{t('Intro_alert2')}{statut.date}</p>
     </div>
   }
   return(
