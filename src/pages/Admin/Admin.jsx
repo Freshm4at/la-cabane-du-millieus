@@ -181,7 +181,7 @@ const Admin = () => {
               label="Close"
               onChange={handleChangeClose}>
               <MenuItem value='Oui'><p style={{color:'black'}}>Oui</p></MenuItem>
-              <MenuItem value='Non'><p style={{color:'black'}}>Non</p></MenuItem>
+              <MenuItem value='Non'><p style={{color:'black'}}>Réouverture</p></MenuItem>
             </Select>
           </FormControl>
           </Box>
