@@ -20,6 +20,7 @@ const imageUploadPathPhotos = dirname + '/src/assets/photos';
 const txtFRUploadPath = dirname + '/public/assets/locales/fr';
 const txtENUploadPath = dirname + '/public/assets/locales/en';
 const txtDEUploadPath = dirname + '/public/assets/locales/de';
+const txtITUploadPath = dirname + '/public/assets/locales/it';
 
 const storageFile = (path) => (
   multer.diskStorage({
@@ -37,6 +38,7 @@ const imageUploadPhotos = multer({storage: storageFile(imageUploadPathPhotos)})
 const txtFRUpload = multer({storage: storageFile(txtFRUploadPath)})
 const txtENUpload = multer({storage: storageFile(txtENUploadPath)})
 const txtDEUpload = multer({storage: storageFile(txtDEUploadPath)})
+const txtITUpload = multer({storage: storageFile(txtITUploadPath)})
 
 morgan.token('id',  function (req, res) { return req.id})
 app.use(morgan("[:date[iso] #:id] :method :status at :url from :remote-addr", {
@@ -62,6 +64,16 @@ app.post('/txt-upload-en', txtENUpload.array('my-image-file'), (req, res, next) 
 app.post('/txt-upload-de', txtDEUpload.array('my-image-file'), (req, res, next) => {
   fs.appendFileSync("./logs/access.log",JSON.stringify(req.files) , "UTF-8",{'flags': 'a+'});
   res.send('POST request recieved on server to /txt-upload-de.');
+})
+app.post('/txt-upload-it', txtITUpload.array('my-image-file'), (req, res, next) => {
+  fs.appendFileSync("./logs/access.log",JSON.stringify(req.files) , "UTF-8",{'flags': 'a+'});
+  res.send('POST request recieved on server to /txt-upload-it.');
+})
+app.post('/close',(req,res,next)=>{
+  fs.appendFileSync("./logs/access.log",JSON.stringify(req.body) , "UTF-8",{'flags': 'a+'});
+  const statutPath = dirname + '/src/pages/Home/Header/statut.json'
+  fs.writeFileSync(statutPath,JSON.stringify(req.body) , {encoding:'utf8',flag:'w'})
+  res.send('POST request recieved on server to /close');
 })
 app.post('/login',(req,res, next) =>{
   const user = crypto.AES.decrypt(req.body.user,process.env.REACT_APP_PASS).toString(crypto.enc.Utf8)

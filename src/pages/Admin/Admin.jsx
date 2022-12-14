@@ -12,12 +12,14 @@ import importAll from '../../components/Tools/importAll';
 
 
 
+
 const Admin = () => {
   const [image, setImage] = useState(null);
   const [img,setImg] = useState(null)
   const [imgType,setimgType]= useState(null)
   const [lang, setLang] = useState(null);
   const [txt,setTxt] = useState(null)
+  const [close,setClose]=useState(null)
   const Base_URL = process.env.REACT_APP_ROUTE
 
   const handleChangeTxt = (event) => {
@@ -26,6 +28,9 @@ const Admin = () => {
   const handleChangeImg = (event) =>{
     setimgType(event.target.value)
   }
+  const handleChangeClose = (event) => {
+    setClose(event.target.value);
+  };
   const handleClickTxt = () =>{
     axios.post(`${Base_URL}/auth`, {
       auth:localStorage.getItem("token") 
@@ -97,6 +102,23 @@ const Admin = () => {
         setTxt(formData)
         setImg(URL.createObjectURL(e.target.files[0]))
       }else{alert("Mauvais fichier rentré... Contactez l'administrateur.")}}
+
+    const HandleClickClose = () =>{
+      axios.post(`${Base_URL}/auth`, {
+        auth:localStorage.getItem("token") 
+      })
+      .then(res => {
+        if(close){
+          const body = {close:close}
+            axios.post(`${Base_URL}/close`, body)
+            alert(`Mise à jour réussi!`)
+          }else{
+            alert(`Faites un choix`)
+          }
+        }
+      )
+    }
+
   return (
     <div className="app__admin">
         <img src={images.fishPhoto} alt='img_seafish'></img>
@@ -137,12 +159,30 @@ const Admin = () => {
                 <MenuItem value='fr'><p style={{color:'black'}}>FR</p></MenuItem>
                 <MenuItem value='en'><p style={{color:'black'}}>EN</p></MenuItem>
                 <MenuItem value='de'><p style={{color:'black'}}>DE</p></MenuItem>
+                <MenuItem value='it'><p style={{color:'black'}}>IT</p></MenuItem>
               </Select>
             </FormControl>
             </Box>
           </div>
           <input className='input' type="file" onChange={getFileInfo} accept=".json"></input>
           <button type='button' className='custom__button' onClick={handleClickTxt}><p className='custom__button-text'>Upload</p></button>
+        </div>
+        <div className='app__admin-upload flex__center'>
+          <p className='p__opensans' style={{"font-size":'50px',"padding-bottom":'2rem'}}>Fermeture restaurant</p><Box sx={{ minWidth: 100 }}>
+            <FormControl fullWidth>
+            <InputLabel id="demo-simple-select-label">Choix</InputLabel>
+              <Select
+                labelId="demo-simple-select-label"
+                id="demo-simple-select"
+                value={close}
+                label="Close"
+                onChange={handleChangeClose}>
+                <MenuItem value='Oui'><p style={{color:'black'}}>Oui</p></MenuItem>
+                <MenuItem value='Non'><p style={{color:'black'}}>Non</p></MenuItem>
+              </Select>
+            </FormControl>
+            </Box>
+          <button type='button' className='custom__button' onClick={HandleClickClose} style={{marginTop:'1rem'}}><p className='custom__button-text'>Mettre à jour</p></button>
         </div>
     </div>
   )

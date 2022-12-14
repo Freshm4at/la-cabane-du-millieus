@@ -16,6 +16,15 @@
     width: 80%;
 }
 
+.app__header_alert{
+    background:#B22222;
+    display:flex
+}
+.app__header_alert h2{
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
 @media screen and (max-width: 1000px){
     .app_header-content{
         padding-top: 1rem;
