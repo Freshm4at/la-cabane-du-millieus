@@ -10,7 +10,7 @@ cd ..
 npm run build
 
 #lauch
-cd /build
+cd build
 serve -s build > /dev/null 2>&1 & 
 cd ../server
 npm start > /dev/null 2>&1 & 
