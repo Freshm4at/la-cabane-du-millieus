@@ -9,7 +9,7 @@ const Menu = () => {
   return(
     <div className='app__menu'>
       <div className='app__menu_header-img'>
-        <img src={images.menuHeader} alt='menu_header img'/>
+        <img src={images.waves_ship} alt='menu_header img'/>
       </div>
       <nav className='app__menu-nav'>
         <ul className='app__menu-nav-links'>

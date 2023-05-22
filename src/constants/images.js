@@ -2,6 +2,8 @@
 import fish_photo from '../assets/baners/fish_photo.jpg';
 import sea_black from '../assets/baners/sea_black.jpg';
 import sea_photo from '../assets/baners/sea_photo.jpg';
+import ship from '../assets/baners/ship.jpg';
+import waves_ship from '../assets/baners/waves_ship.jpg';
 
 // DRAWING
 import boat from '../assets/drawing/boat.png';
@@ -13,9 +15,11 @@ import oyster from '../assets/drawing/oyster.png';
 import fr from '../assets/flags/fr.png'
 import en from '../assets/flags/en.png'
 import de from '../assets/flags/de.png'
+import it from '../assets/flags/it.png'
 import fr_grey from '../assets/flags/fr_grey.png'
 import en_grey from '../assets/flags/en_grey.png'
 import de_grey from '../assets/flags/de_grey.png'
+import it_grey from '../assets/flags/it_grey.png'
 
 // MENU
 import menu_paper_carte_fr from '../assets/menu/menu_paper_carte_fr.jpg'
@@ -65,6 +69,8 @@ const images =  {
   fish_photo,
   sea_black,
   sea_photo,
+  ship,
+  waves_ship,
   boat,
   fish_drawing,
   fisherman,
@@ -72,9 +78,11 @@ const images =  {
   fr,
   en,
   de,
+  it,
   fr_grey,
   en_grey,
   de_grey,
+  it_grey,
   menu_paper_carte_fr,
   menu_paper_carte_en,
   menu_paper_menu_fr,
