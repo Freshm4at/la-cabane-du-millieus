@@ -36,7 +36,7 @@
 
 .app__aboutus-content_img{
     position: relative;
-    transform: translateY(150px);
+    transform: translateY(300px);
     opacity: 0;
     transition: 2s all ease;
 }
@@ -63,15 +63,16 @@
         flex-direction: column;
     }
 
+
     .app__aboutus-content_img {
-        -webkit-transform:rotate(90deg);
-        -moz-transform: rotate(90deg);
-        -ms-transform: rotate(90deg);
-        -o-transform: rotate(90deg);
-        transform: rotate(90deg);
+        
         height: 200px;
     }
-
+    .app__aboutus-content_img.active{
+        transform: translateY(0);
+        transform: rotate(90deg);
+        opacity: 1;
+      }
 }
 
 @media screen and (max-width: 600px) {

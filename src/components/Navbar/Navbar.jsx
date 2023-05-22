@@ -24,7 +24,7 @@ const Navbar = () => {
         <li className='p__opensans'><Link to='/contact'>{t('NavBar_Lien_contact')}</Link></li>
       </ul>
       <div className='app__navbar-smallscreen'>
-        <img src={images.menuButton} onClick={()=> {setToggleMenu(true)}} alt='menu_button'/>
+        <img src={images.buttonMenu} onClick={()=> {setToggleMenu(true)}} alt='menu_button'/>
         {toggleMenu && (
           <div className='app__navbar-smallscreen_overlay flex__center slide-bottom'>
             <MdOutlineRestaurantMenu fontsize={27} className='overlay__close' onClick={()=>{setToggleMenu(false)}}/>
