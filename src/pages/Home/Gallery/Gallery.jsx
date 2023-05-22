@@ -1,5 +1,4 @@
 import React from 'react';
-import { BsArrowLeftShort,BsArrowRightShort } from 'react-icons/bs';
 
 import './Gallery.css';
 import { SubHeading } from '../../../components';
@@ -13,16 +12,6 @@ for (let i = 1; i < ImgFolder[1] + 1; i++) {
 }
 
 const Gallery = () => {
-  const scrollRef = React.useRef(null)
-  const scroll = (direction) =>{
-    const current = scrollRef;
-
-    if(direction === 'left'){
-      current.scrollLeft -= 300
-    }else{
-      current.scrollLeft += 300
-    }
-  }
   const {t} = useTranslation()
 
   return(
@@ -40,10 +29,6 @@ const Gallery = () => {
             <img src={image} alt='gallery'/>
           </div>
         )}
-      </div>
-      <div className='app__gallery-images_arrow'>
-        <BsArrowLeftShort className='gallery__arrow-icon' onClick={()=>{scroll('left')}}/>
-        <BsArrowRightShort className='gallery__arrow-icon' onClick={()=>{scroll('right')}}/>
       </div>
     </div>
   </div>

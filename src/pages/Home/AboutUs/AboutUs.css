@@ -34,6 +34,17 @@
     margin: 1rem;
 }
 
+.app__aboutus-content_img{
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: 2s all ease;
+}
+.app__aboutus-content_img.active{
+    transform: translateY(0);
+    opacity: 1;
+  }
+
 .app__aboutus-content_img img{
     height: 500px;
     margin: 2rem;

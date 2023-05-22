@@ -16,7 +16,7 @@ const Photos = () =>{
     return(
     <div className='app__photos'>
         <div className='app__photos-header'>
-            <img src={images.seatPhoto} alt='sea_photo'></img>
+            <img src={images.sea_photo} alt='sea_photo'></img>
             <h1 className='headtext__cormorant'>{t('Gallerie_titre')}</h1>
         </div>
         <GalleryComponent galleyImages={galleryImages}></GalleryComponent>

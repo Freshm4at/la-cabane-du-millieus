@@ -13,10 +13,10 @@
   top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
-  text-shadow: 1px 1px 2px var(--color-prussian-blue);
+  color: var(--color-black);
 }
 .app__photos-header img{
-    height: 450px;
+    height: 300px;
     width: 100%;
 }
 

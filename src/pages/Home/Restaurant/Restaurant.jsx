@@ -84,7 +84,7 @@ const Restaurant = () => {
       <button type='button' className='custom__button' onClick={event =>  window.location.href='/contact'} ><p className='custom__button-text'>{t('LeRestaurant_bouton')}</p></button>
     </div>
     <div className='app__wrapper_img'>
-      <img src={images.findus} alt="findus"/>
+      <img src={images.terasse7} alt="findus"/>
     </div>
   </div>
 )

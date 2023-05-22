@@ -8,7 +8,7 @@ const Contact = () => {
     const {t} = useTranslation()
     return(
     <div className='app__contact' id='contact'>
-    <img src={images.fishPhoto} alt='fish_photo'></img>
+    <img src={images.fish_photo} alt='fish_photo'></img>
     <div className='app_contact-content app__wrapper section__padding'>
         <div className='app__wrapper_info'>
             <h1 className='app__contact-h1'>{t('Contact_titre')}</h1>
